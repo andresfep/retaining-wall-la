@@ -64,18 +64,18 @@ Subject:   A newly built wall, ideally mid-build or freshly finished, wall weigh
 
 AREA CARD IMAGES  (/img/areas/)
 ===============================
-Filenames match the URL slug: sherman-oaks.jpg, studio-city.jpg, encino.jpg,
-woodland-hills.jpg, pasadena.jpg, glendale.jpg, burbank.jpg,
-la-canada-flintridge.jpg, los-feliz.jpg, silver-lake.jpg, highland-park.jpg,
-beverly-hills.jpg, brentwood.jpg, pacific-palisades.jpg, topanga.jpg
+Filenames match the URL slug. Current service-area list (17):
+  sherman-oaks.jpg, studio-city.jpg, encino.jpg, tarzana.jpg
+  woodland-hills.jpg, calabasas.jpg, glendale.jpg, burbank.jpg
+  la-canada-flintridge.jpg, pasadena.jpg, hollywood-hills.jpg, beverly-hills.jpg
+  brentwood.jpg, pacific-palisades.jpg, malibu.jpg, thousand-oaks.jpg
+  long-beach.jpg
 
-Size:   1000 x 800 (5:4), under 120 KB each
-Subject: a completed wall in that neighbourhood. Shoot wide enough that the
-         street or hillside context reads — the point is proving you work there.
-Also:   /img/areas-overview.jpg  (1600 x 1000) for the section intro.
+Size:   1000 x 800 (5:4), avif q46 / webp q74 / jpg q78
+Also:   /img/areas-overview.jpg  (1200 x 750) — INSTALLED
 
-Cards render an illustrated terrace fallback until the file exists, so partial
-coverage is fine — add photos neighbourhood by neighbourhood as you shoot them.
+Cards render an illustrated fallback until the file exists, so partial coverage
+is fine — add photos neighbourhood by neighbourhood as you shoot them.
 
 SERVICE PAGE PHOTO SLOTS  (/img/services/installation/)
 =======================================================
