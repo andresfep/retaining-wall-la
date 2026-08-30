@@ -62,20 +62,33 @@ Size:      2400 x 1050, under 300 KB
 Subject:   A newly built wall, ideally mid-build or freshly finished, wall weighted
            to the RIGHT of frame. Same fallback behaviour as the homepage hero.
 
-AREA CARD IMAGES  (/img/areas/)
-===============================
-Filenames match the URL slug. Current service-area list (17):
-  sherman-oaks.jpg, studio-city.jpg, encino.jpg, tarzana.jpg
-  woodland-hills.jpg, calabasas.jpg, glendale.jpg, burbank.jpg
-  la-canada-flintridge.jpg, pasadena.jpg, hollywood-hills.jpg, beverly-hills.jpg
-  brentwood.jpg, pacific-palisades.jpg, malibu.jpg, thousand-oaks.jpg
-  long-beach.jpg
+AREA CARD IMAGES  (/img/areas/) — INSTALLED
+===========================================
+17 cards, served from a shared pool of 12 distinct scenes so the grid never
+shows the same photo twice side by side. Filenames match the URL slug.
 
-Size:   1000 x 800 (5:4), avif q46 / webp q74 / jpg q78
-Also:   /img/areas-overview.jpg  (1200 x 750) — INSTALLED
+  sherman-oaks  valley street      studio-city    block terrace
+  encino        flat garden        tarzana        stone terrace
+  woodland-hills timber terrace    calabasas      canyon view
+  glendale      foothill drive     burbank        cmu slope
+  la-canada-flintridge concrete driveway          pasadena  stone terrace
+  hollywood-hills shotcrete canyon beverly-hills  block terrace
+  brentwood     canyon view        pacific-palisades coastal bluff
+  malibu        coastal bluff      thousand-oaks  gabion slope
+  long-beach    flat garden
 
-Cards render an illustrated fallback until the file exists, so partial coverage
-is fine — add photos neighbourhood by neighbourhood as you shoot them.
+Size:    1000 x 800 (5:4), avif q46 / webp q72 / jpg q78
+Weight:  avif ~73 KB each — 1.2 MB for all 17 cards
+Served through <picture>; onerror drops the <picture> back to the card's
+dark background rather than showing a broken image.
+
+ALT TEXT: these are illustrative scenes reused across cities, so alt describes
+the wall and scene and then names the city as a SERVICE statement —
+"...— retaining wall contractor serving Sherman Oaks" — never "a wall we built
+in Sherman Oaks". Do not reword these into location claims.
+
+TO CHANGE THE POOL: regenerate a scene at 1000x800, then re-save it under every
+slug assigned to it above in all three formats.
 
 SERVICE PAGE PHOTO SLOTS  (/img/services/installation/)
 =======================================================
