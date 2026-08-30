@@ -157,8 +157,10 @@ section.tight{padding:72px 0}
 .type-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:24px;margin-top:46px}
 .type-more{margin-top:34px;text-align:center}
 .type{background:#fff;border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column}
-.type .art{aspect-ratio:16/10;background:var(--stone)}
-.type .art svg{width:100%;height:100%;display:block}
+.type .art{position:relative;aspect-ratio:16/10;background:var(--stone);overflow:hidden}
+.type .art svg{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:1}
+.type .art picture{position:absolute;inset:0;z-index:2}
+.type .art img{width:100%;height:100%;object-fit:cover;display:block}
 .type .body{padding:26px 24px;flex:1}
 .type h3{font-size:22px;margin-bottom:8px}
 .type p{font-size:14.5px;color:var(--muted);margin-bottom:14px}
@@ -707,6 +709,13 @@ nav.main{margin-left:auto;margin-right:22px}
               <path d="M6 148h308M14 122h296M22 96h284M30 70h272"/>
             </g>
             <rect x="0" y="176" width="320" height="24" fill="#8E9E86"/><path d="M0 66h320" stroke="#8E9E86" stroke-width="10"/></svg>
+          <picture>
+            <source type="image/avif" srcset="/img/types/block-retaining-walls.avif">
+            <source type="image/webp" srcset="/img/types/block-retaining-walls.webp">
+            <img src="/img/types/block-retaining-walls.jpg" alt="Newly built segmental block retaining wall stepped back in tiers, terracing a planted Los Angeles hillside"
+                 width="800" height="500" loading="lazy" decoding="async"
+                 onerror="this.closest('picture').remove()">
+          </picture>
         </div>
         <div class="body">
           <h3>Block Retaining Walls</h3>
@@ -755,6 +764,13 @@ nav.main{margin-left:auto;margin-right:22px}
             <rect x="0" y="172" width="320" height="28" fill="#8E9E86"/>
             <path d="M0 66h320" stroke="#8E9E86" stroke-width="10"/>
           </svg>
+          <picture>
+            <source type="image/avif" srcset="/img/types/stone-boulder-walls.avif">
+            <source type="image/webp" srcset="/img/types/stone-boulder-walls.webp">
+            <img src="/img/types/stone-boulder-walls.jpg" alt="Dry-stacked natural stone retaining wall with placed boulders terracing a Los Angeles canyon lot, San Gabriel Mountains behind"
+                 width="800" height="500" loading="lazy" decoding="async"
+                 onerror="this.closest('picture').remove()">
+          </picture>
         </div>
         <div class="body">
           <h3>Stone &amp; Boulder Walls</h3>
@@ -785,6 +801,13 @@ nav.main{margin-left:auto;margin-right:22px}
             <rect x="0" y="176" width="320" height="24" fill="#8E9E86"/>
             <path d="M0 66h320" stroke="#8E9E86" stroke-width="10"/>
           </svg>
+          <picture>
+            <source type="image/avif" srcset="/img/types/wood-retaining-walls.avif">
+            <source type="image/webp" srcset="/img/types/wood-retaining-walls.webp">
+            <img src="/img/types/wood-retaining-walls.jpg" alt="Pressure-treated timber retaining wall holding a planted slope below a level lawn in a Los Angeles hillside back yard"
+                 width="800" height="500" loading="lazy" decoding="async"
+                 onerror="this.closest('picture').remove()">
+          </picture>
         </div>
         <div class="body">
           <h3>Wood Retaining Walls</h3>
