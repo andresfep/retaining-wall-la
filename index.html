@@ -318,18 +318,25 @@ footer .brand{margin-bottom:16px}
 .f-contact svg{width:17px;height:17px;flex:none;margin-top:3px;color:var(--gold)}
 
 /* ---- mobile sticky call bar ---- */
-.mobilebar{position:fixed;left:0;right:0;bottom:0;z-index:140;display:none;padding:9px 14px 12px;
-  background:linear-gradient(180deg,#FBE49C 0%,#EFC44B 40%,#D4A62A 58%,#B0891B 100%);
-  box-shadow:0 -6px 26px rgba(0,0,0,.3);transform:translateY(115%);transition:transform .3s cubic-bezier(.22,.61,.36,1)}
+.mobilebar{position:fixed;left:0;right:0;bottom:0;z-index:140;display:none;
+  box-shadow:0 -6px 26px rgba(0,0,0,.32);transform:translateY(115%);transition:transform .3s cubic-bezier(.22,.61,.36,1);
+  padding-bottom:env(safe-area-inset-bottom,0px)}
 .mobilebar.show{transform:none}
-.mb-call{display:flex;align-items:center;justify-content:center;gap:13px;color:var(--navy-900)}
-.mb-ico{width:44px;height:44px;flex:none;background:var(--navy-900);border-radius:5px;display:grid;place-items:center}
-.mb-ico svg{width:20px;height:20px;color:var(--gold-lt)}
-.mb-label{display:block;font-size:10.5px;font-weight:700;letter-spacing:.17em;text-transform:uppercase;color:rgba(11,23,33,.7)}
-.mb-num{display:block;font-family:var(--serif);font-weight:800;font-size:26px;line-height:1.05;color:var(--navy-900);letter-spacing:-.01em}
+.mb-row{display:grid;grid-template-columns:1fr 1fr}
+.mb-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;
+  min-height:62px;padding:10px 12px;text-align:center;transition:filter .16s}
+.mb-btn:active{filter:brightness(.94)}
+.mb-label{display:block;font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.mb-main{display:block;font-family:var(--serif);font-weight:800;font-size:22px;line-height:1.06;letter-spacing:-.012em;white-space:nowrap}
+.mb-call{background:linear-gradient(180deg,#FBE49C 0%,#EFC44B 40%,#D4A62A 58%,#B0891B 100%);color:var(--navy-900)}
+.mb-call .mb-label{color:rgba(11,23,33,.72)}
+.mb-quote{background:linear-gradient(180deg,#22394A 0%,#162937 55%,#0B1721 100%);color:#fff;
+  box-shadow:inset 2px 0 0 rgba(239,196,75,.6)}
+.mb-quote .mb-label{color:var(--gold-lt)}
+@media(max-width:360px){.mb-main{font-size:19px}}
 @media(max-width:900px){
   .mobilebar{display:block}
-  body{padding-bottom:86px}
+  body{padding-bottom:78px}
 }
 
 
@@ -1056,13 +1063,16 @@ nav.main{margin-left:auto;margin-right:22px}
 
 <!-- mobile sticky call bar -->
 <div class="mobilebar" id="mobilebar">
-  <a class="mb-call" href="tel:13235550142">
-    <span class="mb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.4 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg></span>
-    <span>
-      <span class="mb-label">Tap to call now</span>
-      <span class="mb-num">(323) 555-0142</span>
-    </span>
-  </a>
+  <div class="mb-row">
+    <a class="mb-btn mb-call" href="tel:13235550142">
+      <span class="mb-label">Call now</span>
+      <span class="mb-main">(323) 555-0142</span>
+    </a>
+    <a class="mb-btn mb-quote" href="#estimate">
+      <span class="mb-label">No obligation</span>
+      <span class="mb-main">Free Quote</span>
+    </a>
+  </div>
 </div>
 
 <script>
