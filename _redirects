@@ -9,10 +9,10 @@ https://www.retainingwallcontractorlosangeles.com/*  https://retainingwallcontra
 /contact-us                /contact/                                     301
 
 # Service shorthands
-/installation              /services/retaining-wall-installation/        301
-/repair                    /services/retaining-wall-repair/              301
-/commercial                /services/commercial-retaining-walls/         301
-/hillside                  /services/hillside-retaining-walls/           301
+/installation              /retaining-wall-installation/        301
+/repair                    /retaining-wall-repair/              301
+/commercial                /commercial-retaining-walls/         301
+/hillside                  /hillside-retaining-walls/           301
 
 # Common misspellings with real search volume
 /retaining-wall-contractor /                                             301
@@ -28,3 +28,6 @@ https://www.retainingwallcontractorlosangeles.com/*  https://retainingwallcontra
 /shotcrete                 /retaining-walls/shotcrete-walls/              301
 /gabion                    /retaining-walls/gabion-walls/                 301
 /types/*                   /retaining-walls/:splat                        301
+
+# Old /services/ prefix retired
+/services/*                /:splat                                        301
