@@ -68,7 +68,7 @@ Note the map does not need to show a street address. A service-area business can
 the pin at the city or draw the coverage area.
 
 ## Before launch
-- Decide the business name. Currently "Hillside Stoneworks" in the header, footer, and schema — search and replace in `index.html`.
+- Decide the business name. Currently "Retaining Wall Contractors Los Angeles" in the header, footer, and schema — search and replace in `index.html`.
 - Replace `(323) 555-0142` with the real number (appears in topbar, hero, NAP block, final CTA, and schema).
 - Replace `CSLB #0000000` with the real licence number in the topbar, NAP block, and footer.
 - Replace all cost ranges with the contractor's real numbers. Wrong pricing generates unqualified calls.

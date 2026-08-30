@@ -62,7 +62,7 @@ header.site{background:#fff;border-bottom:1px solid var(--line);position:sticky;
 header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:22px;padding:14px 26px}
 .brand{display:flex;align-items:center;gap:13px}
 .brand .mark{width:46px;height:46px;flex:none}
-.brand .name{font-family:var(--serif);font-weight:800;font-size:25px;line-height:1;letter-spacing:-.012em;text-transform:uppercase;color:var(--navy-900)}
+.brand .name{font-family:var(--serif);font-weight:800;font-size:20px;line-height:1.02;white-space:nowrap;letter-spacing:-.012em;text-transform:uppercase;color:var(--navy-900)}
 .brand .name small{display:block;font-family:var(--sans);font-weight:600;font-size:10.5px;letter-spacing:.22em;color:var(--green);margin-top:4px}
 nav.main{display:flex;gap:26px}
 nav.main a{font-weight:600;font-size:15px;color:var(--navy-800);white-space:nowrap}
@@ -355,7 +355,7 @@ footer .brand .name{color:#fff}
 .mini-why p{font-size:14.5px;color:var(--muted);margin:0}
 @media(max-width:640px){.mini-why{grid-template-columns:1fr}}
 
-@media(max-width:1050px){
+@media(max-width:1150px){
   nav.main{display:none}
   .burger{display:flex}
   .cols{grid-template-columns:1fr;gap:46px}
@@ -481,6 +481,32 @@ body.nav-open{overflow:hidden}
 /* brand mention in the hero sub-headline, linked back to the homepage */
 .phero-copy p .brandlink{color:var(--gold-lt);font-weight:700;border-bottom:1px solid rgba(239,196,75,.45);transition:border-color .16s}
 .phero-copy p .brandlink:hover{border-color:var(--gold-lt)}
+
+/* ===== service areas dropdown ===== */
+.nav-areas{position:relative}
+.areatrig{display:inline-flex;align-items:center;gap:6px;background:none;border:0;padding:0;cursor:pointer;
+  white-space:nowrap;font-family:var(--sans);font-weight:600;font-size:15px;color:var(--navy-800)}
+.areatrig .chev{width:15px;height:15px;transition:transform .2s}
+.areatrig:hover,.areatrig[aria-expanded="true"]{color:var(--green)}
+.areatrig[aria-expanded="true"] .chev{transform:rotate(180deg)}
+.areadrop{position:absolute;left:50%;transform:translateX(-50%);top:calc(100% + 14px);width:300px;
+  background:#fff;border-top:3px solid var(--gold);border-bottom:1px solid var(--line);
+  box-shadow:0 22px 44px rgba(11,23,33,.18);z-index:95;border-radius:0 0 4px 4px}
+.areadrop[hidden]{display:none}
+.areadrop h4{font-family:var(--sans);font-weight:700;font-size:12.5px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--navy-900);padding:22px 24px 12px;margin:0 0 2px;border-bottom:1px solid var(--line)}
+.arealist{max-height:396px;overflow-y:auto;padding:6px 0;scrollbar-width:thin}
+.arealist::-webkit-scrollbar{width:8px}
+.arealist::-webkit-scrollbar-thumb{background:#D6D0C2;border-radius:4px}
+.arealist::-webkit-scrollbar-track{background:#F3F0E8}
+.arealist a{display:block;font-size:14.5px;color:#41505C;padding:9px 24px}
+.arealist a:hover{color:var(--green);background:var(--paper)}
+.areadrop .areadrop-all{display:block;padding:13px 24px;border-top:1px solid var(--line);
+  font-weight:700;font-size:13px;letter-spacing:.04em;color:var(--gold-dk)}
+.areadrop .areadrop-all:hover{color:var(--gold)}
+
+.nd-arealist{max-height:none}
+.nd-arealist a{padding-left:32px}
 </style>
 
 <script type="application/ld+json">{
@@ -514,7 +540,7 @@ body.nav-open{overflow:hidden}
       },
       "provider": {
         "@type": "GeneralContractor",
-        "name": "Hillside Stoneworks",
+        "name": "Retaining Wall Contractors Los Angeles",
         "url": "https://retainingwallcontractorlosangeles.com/",
         "telephone": "+1-323-555-0142"
       },
@@ -597,12 +623,35 @@ body.nav-open{overflow:hidden}
         <g fill="url(#g1)"><rect x="6" y="54" width="72" height="13" rx="2"/><rect x="18" y="38" width="60" height="13" rx="2"/><rect x="32" y="22" width="46" height="13" rx="2"/></g>
         <g stroke="#0B1721" stroke-width="2" opacity=".4"><path d="M30 54v13M54 54v13M40 38v13M62 38v13M50 22v13"/></g>
       </svg>
-      <span class="name">Hillside Stoneworks<small>RETAINING WALLS · LA</small></span>
+      <span class="name">Retaining Wall<br>Contractors<small>LOS ANGELES, CA</small></span>
     </a>
     <nav class="main">
       <span class="nav-mega"><button class="megatrig" type="button" aria-expanded="false" aria-controls="mega-services">Services<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button></span>
       <a href="/retaining-walls/">Wall Types</a>
-      <a href="/#areas">Service Areas</a>
+      <span class="nav-areas"><button class="areatrig" type="button" aria-expanded="false" aria-controls="area-drop">Service Areas<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="areadrop" id="area-drop" hidden>
+        <h4>Where We Serve</h4>
+        <div class="arealist">
+          <a href="/areas/beverly-hills/">Beverly Hills</a>
+          <a href="/areas/brentwood/">Brentwood</a>
+          <a href="/areas/burbank/">Burbank</a>
+          <a href="/areas/calabasas/">Calabasas</a>
+          <a href="/areas/encino/">Encino</a>
+          <a href="/areas/glendale/">Glendale</a>
+          <a href="/areas/hollywood-hills/">Hollywood Hills</a>
+          <a href="/areas/la-canada-flintridge/">La Cañada Flintridge</a>
+          <a href="/areas/long-beach/">Long Beach</a>
+          <a href="/areas/malibu/">Malibu</a>
+          <a href="/areas/pacific-palisades/">Pacific Palisades</a>
+          <a href="/areas/pasadena/">Pasadena</a>
+          <a href="/areas/sherman-oaks/">Sherman Oaks</a>
+          <a href="/areas/studio-city/">Studio City</a>
+          <a href="/areas/tarzana/">Tarzana</a>
+          <a href="/areas/thousand-oaks/">Thousand Oaks</a>
+          <a href="/areas/woodland-hills/">Woodland Hills</a>
+        </div>
+        <a class="areadrop-all" href="/#areas">View all service areas &rarr;</a>
+      </div></span>
       <a href="/about/">About</a>
       <a href="/contact/">Contact</a>
     </nav>
@@ -725,7 +774,31 @@ body.nav-open{overflow:hidden}
         </div>
       </div>
       <a href="/retaining-walls/">Wall Types</a>
-      <a href="/#areas">Service Areas</a>
+      <div class="nd-group">
+        <button class="nd-acc" type="button" aria-expanded="false">Service Areas<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="nd-sub" hidden>
+          <div class="nd-sub2 nd-arealist">
+            <a href="/areas/beverly-hills/">Beverly Hills</a>
+            <a href="/areas/brentwood/">Brentwood</a>
+            <a href="/areas/burbank/">Burbank</a>
+            <a href="/areas/calabasas/">Calabasas</a>
+            <a href="/areas/encino/">Encino</a>
+            <a href="/areas/glendale/">Glendale</a>
+            <a href="/areas/hollywood-hills/">Hollywood Hills</a>
+            <a href="/areas/la-canada-flintridge/">La Cañada Flintridge</a>
+            <a href="/areas/long-beach/">Long Beach</a>
+            <a href="/areas/malibu/">Malibu</a>
+            <a href="/areas/pacific-palisades/">Pacific Palisades</a>
+            <a href="/areas/pasadena/">Pasadena</a>
+            <a href="/areas/sherman-oaks/">Sherman Oaks</a>
+            <a href="/areas/studio-city/">Studio City</a>
+            <a href="/areas/tarzana/">Tarzana</a>
+            <a href="/areas/thousand-oaks/">Thousand Oaks</a>
+            <a href="/areas/woodland-hills/">Woodland Hills</a>
+            <a class="nd-all" href="/#areas">View all service areas &rarr;</a>
+          </div>
+        </div>
+      </div>
       <a href="/about/">About</a>
       <a href="/contact/">Contact</a>
     </nav>
@@ -1248,7 +1321,7 @@ body.nav-open{overflow:hidden}
       <div class="mapframe">
         <iframe
           src="https://maps.google.com/maps?q=Los%20Angeles%2C%20CA&amp;z=10&amp;output=embed"
-          title="Map of the Hillside Stoneworks retaining wall installation service area across Los Angeles County"
+          title="Map of the Retaining Wall Contractors Los Angeles retaining wall installation service area across Los Angeles County"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
           allowfullscreen></iframe>
@@ -1281,7 +1354,7 @@ body.nav-open{overflow:hidden}
             <g fill="#D4A62A"><rect x="6" y="54" width="72" height="13" rx="2"/><rect x="18" y="38" width="60" height="13" rx="2"/><rect x="32" y="22" width="46" height="13" rx="2"/></g>
             <g stroke="#0B1721" stroke-width="2" opacity=".4"><path d="M30 54v13M54 54v13M40 38v13M62 38v13M50 22v13"/></g>
           </svg>
-          <span class="name">Hillside Stoneworks<small>RETAINING WALLS · LA</small></span>
+          <span class="name">Retaining Wall<br>Contractors<small>LOS ANGELES, CA</small></span>
         </div>
         <p>Engineered retaining walls for Los Angeles hillsides. Stone, concrete, block and timber — with drainage, engineering and permits handled as part of the job.</p>
       </div>
@@ -1342,7 +1415,7 @@ body.nav-open{overflow:hidden}
 
     <div class="legal">
       Cost ranges shown are planning estimates only and do not constitute a quote. Permit thresholds and requirements vary by jurisdiction within Los Angeles County — confirm requirements for your property with the relevant building department. Verify any contractor's licence at cslb.ca.gov before hiring.<br><br>
-      © 2026 Hillside Stoneworks. All rights reserved. · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a>
+      © 2026 Retaining Wall Contractors Los Angeles. All rights reserved. · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a>
     </div>
   </div>
 </footer>
@@ -1450,6 +1523,25 @@ body.nav-open{overflow:hidden}
     var open = b.getAttribute('aria-expanded') === 'true';
     b.setAttribute('aria-expanded', open ? 'false' : 'true');
     panel.hidden = open;
+  });
+})();
+</script>
+
+<script>
+(function(){                                  /* service areas dropdown */
+  var t=document.querySelector('.areatrig'), d=document.getElementById('area-drop');
+  if(!t||!d) return;
+  var head=t.closest('header'), timer=null;
+  function show(){ clearTimeout(timer); d.hidden=false; t.setAttribute('aria-expanded','true'); }
+  function hide(){ d.hidden=true; t.setAttribute('aria-expanded','false'); }
+  function lazyHide(){ clearTimeout(timer); timer=setTimeout(hide,160); }
+  t.closest('.nav-areas').addEventListener('mouseenter',show);
+  d.addEventListener('mouseenter',function(){ clearTimeout(timer); });
+  head.addEventListener('mouseleave',lazyHide);
+  t.addEventListener('click',function(e){ e.preventDefault(); d.hidden?show():hide(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') hide(); });
+  document.addEventListener('click',function(e){
+    if(!d.hidden && !d.contains(e.target) && !t.contains(e.target)) hide();
   });
 })();
 </script>
