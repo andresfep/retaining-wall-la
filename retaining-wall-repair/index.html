@@ -223,7 +223,7 @@ section{padding:82px 0}
 .acard{position:relative;display:block;aspect-ratio:5/4;overflow:hidden;border:1px solid var(--line);border-radius:4px;background:var(--navy-800);
   transition:transform .2s,box-shadow .2s,border-color .2s}
 .acard:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(11,23,33,.22);border-color:var(--gold)}
-.acard-media{position:absolute;inset:0;overflow:hidden}
+.acard-media{position:absolute;inset:0;overflow:hidden;isolation:isolate}
 .acard-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:1;transition:transform .5s ease}
 .acard:hover .acard-media img{transform:scale(1.06)}
 /* illustrated fallback: layered terrace courses, tint varies per card */
