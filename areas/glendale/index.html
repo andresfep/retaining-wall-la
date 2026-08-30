@@ -159,8 +159,10 @@ section.tight{padding:72px 0}
 /* types */
 .type-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:46px}
 .type{background:#fff;border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column}
-.type .art{aspect-ratio:16/10;background:var(--stone)}
-.type .art svg{width:100%;height:100%;display:block}
+.type .art{position:relative;aspect-ratio:16/10;background:var(--stone);overflow:hidden}
+.type .art svg{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:1}
+.type .art picture{position:absolute;inset:0;z-index:2}
+.type .art img{width:100%;height:100%;object-fit:cover;display:block}
 .type .body{padding:26px 24px;flex:1}
 .type h3{font-size:22px;margin-bottom:8px}
 .type p{font-size:14.5px;color:var(--muted);margin-bottom:14px}
@@ -366,7 +368,7 @@ footer .brand{margin-bottom:16px}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 
 /* ===== mobile menu: visible trigger + slide-in drawer ===== */
-.burger{display:none;width:46px;height:44px;align-items:center;justify-content:center;
+.burger{flex:none;width:46px;height:44px;align-items:center;justify-content:center;
   background:var(--navy-900);border:0;border-radius:3px;cursor:pointer;padding:0}
 .burger:hover{background:var(--navy-700)}
 .burger .bars,.burger .bars::before,.burger .bars::after{display:block;width:20px;height:2px;
@@ -843,6 +845,14 @@ body.nav-open{overflow:hidden}
             <rect x="0" y="172" width="320" height="28" fill="#8E9E86"/>
             <path d="M0 66h320" stroke="#8E9E86" stroke-width="10"/>
           </svg>
+          <picture>
+            <source type="image/avif" srcset="/img/types/stone-boulder-walls.avif">
+            <source type="image/webp" srcset="/img/types/stone-boulder-walls.webp">
+            <img src="/img/types/stone-boulder-walls.jpg" alt="Dry-stacked stone retaining wall with placed boulders terracing a hillside lot, the style of stone retaining wall built for Glendale, CA properties"
+                 title="Stone retaining walls in Glendale"
+                 width="800" height="500" loading="lazy" decoding="async"
+                 onerror="this.closest('picture').remove()">
+          </picture>
         </div>
         <div class="body">
           <h3>Stone Retaining Walls</h3>
@@ -873,6 +883,14 @@ body.nav-open{overflow:hidden}
             <rect x="0" y="176" width="320" height="24" fill="#8E9E86"/>
             <path d="M0 66h320" stroke="#8E9E86" stroke-width="10"/>
           </svg>
+          <picture>
+            <source type="image/avif" srcset="/img/types/wood-retaining-walls.avif">
+            <source type="image/webp" srcset="/img/types/wood-retaining-walls.webp">
+            <img src="/img/types/wood-retaining-walls.jpg" alt="Pressure-treated timber retaining wall on posts holding a planted slope, the style of wood retaining wall built for Glendale, CA properties"
+                 title="Wood retaining walls in Glendale"
+                 width="800" height="500" loading="lazy" decoding="async"
+                 onerror="this.closest('picture').remove()">
+          </picture>
         </div>
         <div class="body">
           <h3>Wood Retaining Walls</h3>
@@ -898,6 +916,14 @@ body.nav-open{overflow:hidden}
             <rect x="0" y="176" width="320" height="24" fill="#8E9E86"/>
             <path d="M0 62h320" stroke="#8E9E86" stroke-width="10"/>
           </svg>
+          <picture>
+            <source type="image/avif" srcset="/img/types/concrete-retaining-walls.avif">
+            <source type="image/webp" srcset="/img/types/concrete-retaining-walls.webp">
+            <img src="/img/types/concrete-retaining-walls.jpg" alt="Poured concrete retaining wall with a board-formed face curving along a driveway, the style of concrete retaining wall built for Glendale, CA properties"
+                 title="Concrete retaining walls in Glendale"
+                 width="800" height="500" loading="lazy" decoding="async"
+                 onerror="this.closest('picture').remove()">
+          </picture>
         </div>
         <div class="body">
           <h3>Concrete Retaining Walls</h3>
