@@ -1,0 +1,20 @@
+# Force apex
+https://www.retainingwallcontractorlosangeles.com/*  https://retainingwallcontractorlosangeles.com/:splat  301
+
+# Vanity + common variants
+/home                      /                                             301
+/estimate                  /#estimate                                    301
+/free-estimate             /#estimate                                    301
+/quote                     /#estimate                                    301
+/contact-us                /contact/                                     301
+
+# Service shorthands
+/installation              /services/retaining-wall-installation/        301
+/repair                    /services/retaining-wall-repair/              301
+/commercial                /services/commercial-retaining-walls/         301
+/hillside                  /services/hillside-retaining-walls/           301
+
+# Common misspellings with real search volume
+/retaining-wall-contractor /                                             301
+/retainer-wall             /                                             301
+/retaning-wall             /                                             301
