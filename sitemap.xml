@@ -9,9 +9,14 @@
   <url><loc>https://retainingwallcontractorlosangeles.com/services/hillside-retaining-walls/</loc><priority>0.9</priority></url>
 
   <!-- Wall types -->
-  <url><loc>https://retainingwallcontractorlosangeles.com/types/stone-retaining-walls/</loc><priority>0.8</priority></url>
-  <url><loc>https://retainingwallcontractorlosangeles.com/types/wood-retaining-walls/</loc><priority>0.8</priority></url>
-  <url><loc>https://retainingwallcontractorlosangeles.com/types/concrete-retaining-walls/</loc><priority>0.8</priority></url>
+  <url><loc>https://retainingwallcontractorlosangeles.com/retaining-walls/</loc><priority>0.8</priority></url>
+  <url><loc>https://retainingwallcontractorlosangeles.com/retaining-walls/stone-boulder-walls/</loc><priority>0.8</priority></url>
+  <url><loc>https://retainingwallcontractorlosangeles.com/retaining-walls/wood-retaining-walls/</loc><priority>0.8</priority></url>
+  <url><loc>https://retainingwallcontractorlosangeles.com/retaining-walls/block-retaining-walls/</loc><priority>0.8</priority></url>
+  <url><loc>https://retainingwallcontractorlosangeles.com/retaining-walls/cmu-block-walls/</loc><priority>0.8</priority></url>
+  <url><loc>https://retainingwallcontractorlosangeles.com/retaining-walls/shotcrete-walls/</loc><priority>0.8</priority></url>
+  <url><loc>https://retainingwallcontractorlosangeles.com/retaining-walls/gabion-walls/</loc><priority>0.8</priority></url>
+  <url><loc>https://retainingwallcontractorlosangeles.com/retaining-walls/concrete-retaining-walls/</loc><priority>0.8</priority></url>
 
   <!-- Areas -->
   <url><loc>https://retainingwallcontractorlosangeles.com/areas/</loc><priority>0.7</priority></url>

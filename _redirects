@@ -18,3 +18,13 @@ https://www.retainingwallcontractorlosangeles.com/*  https://retainingwallcontra
 /retaining-wall-contractor /                                             301
 /retainer-wall             /                                             301
 /retaning-wall             /                                             301
+
+# Wall type shorthands
+/block                     /retaining-walls/block-retaining-walls/        301
+/cmu                       /retaining-walls/cmu-block-walls/              301
+/concrete                  /retaining-walls/concrete-retaining-walls/     301
+/stone                     /retaining-walls/stone-boulder-walls/          301
+/wood                      /retaining-walls/wood-retaining-walls/         301
+/shotcrete                 /retaining-walls/shotcrete-walls/              301
+/gabion                    /retaining-walls/gabion-walls/                 301
+/types/*                   /retaining-walls/:splat                        301
