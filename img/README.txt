@@ -1,15 +1,21 @@
 HERO IMAGE — INSTALLED
 ======================
-hero-hillside-wall.{jpg,webp,avif}       1800 x 1200  (2x)
-hero-hillside-wall-1100.{jpg,webp,avif}  1100 x 733   (1x)
+hero-hillside-wall-1100.{jpg,webp,avif}  1100 x 733
 
-Wired into index.html via <picture> with srcset. Browsers pick AVIF > WebP > JPG
-and the 1100px file on narrow screens. Focal point set to 62% 62% so the terraces
+Wired into index.html and areas/*/index.html via <picture> with srcset.
+Browsers pick AVIF > WebP > JPG. Focal point set to 62% 62% so the terraces
 stay in frame while the sky and hills sit under the headline.
 
-Source was 1208px wide, so 1800px is the practical ceiling — upscaling further adds
-file size without adding detail. If you get a higher-resolution original, re-run at
-2400px wide and keep the JPG under ~300 KB.
+Sizes: avif 113 KB · webp 133 KB · jpg 188 KB
+
+NO 2x FILE YET. The source supplied was 1100px wide, so there is nothing to
+build an 1800px variant from — upscaling would add bytes without adding
+detail. The srcset lists only the 1100px candidate, which is correct: a
+srcset must never claim a width it cannot deliver.
+
+To add the 2x set later: drop a >=1800px original in here and re-run the
+resize, then restore the "hero-hillside-wall.{ext} 1800w" candidates and the
+width="1800" height="1200" attributes in index.html and every area page.
 
 SERVICE PAGE HERO
 =================
