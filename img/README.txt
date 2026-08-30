@@ -1,3 +1,41 @@
+IMAGE CONVENTIONS — APPLY TO EVERY NEW IMAGE
+===========================================
+FILENAME   Keyword slug matching the page it serves, e.g. wood-retaining-walls.jpg,
+           areas/sherman-oaks.jpg. The filename is itself a ranking signal.
+
+FORMATS    Always ship three: .avif, .webp, .jpg — referenced through <picture>
+           with the .jpg as the <img> fallback. Browsers pick AVIF > WebP > JPG.
+
+SIZES      Hero      1100px wide (raise to 1800 when a bigger source exists)
+           Type card  800 x 500  (16:10, ~2x the rendered card)
+           Body slot 1600 x 900  (16:9)
+           Area card 1000 x 800  (5:4)
+
+QUALITY    Cards/body: avif q46 · webp q74 · jpg q78 — lands ~40/90/110 KB.
+           Hero: avif q60 · webp q80 · jpg q82 (above the fold, worth the bytes).
+
+ALT        Describes what is actually in the photo AND carries the page's target
+           keyword. Never keyword-stuffed, never a bare keyword. Example:
+             "Poured concrete retaining wall with a board-formed face curving along
+              a driveway on a Los Angeles hillside property"
+
+TITLE      A short label, NOT a copy of the alt — some screen readers announce both,
+           and duplicate text is read twice. Example: "Concrete retaining wall in
+           Los Angeles".
+
+LOADING    Below the fold: loading="lazy" decoding="async".
+           Hero: fetchpriority="high", never lazy.
+           Always set width and height so the layout doesn't shift.
+
+FALLBACK   Type cards keep their SVG illustration underneath the photo
+           (svg z-index 1, picture z-index 2) with onerror removing the <picture>.
+           A missing or failed image degrades to the illustration, never to a
+           broken-image icon.
+
+HONESTY    Alt text must not claim a photo shows your completed work in a specific
+           neighbourhood unless it actually does. Area-card alt is phrased as
+           descriptive, not as a claim of a finished job at that address.
+
 HERO IMAGE — INSTALLED
 ======================
 hero-hillside-wall-1100.{jpg,webp,avif}  1100 x 733
