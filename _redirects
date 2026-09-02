@@ -7,6 +7,11 @@ https://www.retainingwallcontractorlosangeles.com/*  https://retainingwallcontra
 /free-estimate             /#estimate                                    301
 /quote                     /#estimate                                    301
 /contact-us                /contact/                                     301
+/faqs                      /faq/                                         301
+/questions                 /faq/                                         301
+/service-areas             /areas/                                       301
+/locations                 /areas/                                       301
+/about-us                  /about/                                       301
 
 # Service shorthands
 /installation              /retaining-wall-installation/        301

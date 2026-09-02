@@ -545,59 +545,6 @@ body.nav-open{overflow:hidden}
       ]
     },
     {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How quickly can you come out?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "For most enquiries within a few working days, and sooner where a wall is actively moving. If you are describing a wall that has shifted noticeably, tell us on the call — that moves up the list."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you charge for an estimate?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. On-site estimates are free and carry no obligation. What you get at the end is an itemised written scope you can compare against anyone else's."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you take on small jobs?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Low garden walls and short runs are a normal part of the work, and a small wall built properly still needs the same drainage and base preparation as a large one."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can you just tell me if my wall is safe?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We can tell you what we see and what it suggests, in writing. Where a wall is threatening a structure or a neighbouring property, that needs an engineer's assessment rather than a contractor's opinion, and we will say so plainly rather than reassure you."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which areas do you cover?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Seventeen communities across Los Angeles County and the surrounding hillside cities — the full list is below. If you are just outside it, call anyway and we will tell you honestly whether we are the right people for the job."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What if I already have a quote from someone else?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Bring it. A second itemised scope is genuinely useful even if you do not use us, because the line items are where the differences between bids actually live — particularly the drainage, which is the easiest thing to leave out of a cheap quote."
-          }
-        }
-      ]
-    },
-    {
       "@type": "GeneralContractor",
       "@id": "https://retainingwallcontractorlosangeles.com/#business",
       "name": "Retaining Wall Contractors Los Angeles",
@@ -777,6 +724,15 @@ body.nav-open{overflow:hidden}
 @media(max-width:960px){.abx,.cx{grid-template-columns:1fr}.abx-rail{position:static}
   .abx-photo{aspect-ratio:16/10;max-height:420px}}
 </style>
+<style>
+.nav-actions{display:flex;align-items:center;gap:10px;flex:none}
+.nav-est{display:inline-flex;align-items:center;font-weight:700;font-size:14.5px;letter-spacing:.01em;
+  color:var(--navy-900);border:1.5px solid #C9D0D6;background:#fff;padding:13px 18px;border-radius:4px;
+  transition:border-color .16s,background .16s,color .16s}
+.nav-est:hover{border-color:var(--navy-900);background:var(--navy-900);color:#fff}
+@media(max-width:1240px){.nav-est{padding:11px 14px;font-size:13.5px}}
+@media(max-width:1150px){.nav-est{display:none}}
+</style>
 </head>
 <body>
 
@@ -802,8 +758,8 @@ body.nav-open{overflow:hidden}
       <span class="name">Retaining Wall<br>Contractors<small>LOS ANGELES, CA</small></span>
     </a>
     <nav class="main">
+      <a href="/">Home</a>
       <span class="nav-mega"><button class="megatrig" type="button" aria-expanded="false" aria-controls="mega-services">Services<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button></span>
-      <a href="/retaining-walls/">Wall Types</a>
       <span class="nav-areas"><button class="areatrig" type="button" aria-expanded="false" aria-controls="area-drop">Service Areas<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
       <div class="areadrop" id="area-drop" hidden>
         <h4>Where We Serve</h4>
@@ -828,10 +784,14 @@ body.nav-open{overflow:hidden}
         </div>
         <a class="areadrop-all" href="/#areas">View all service areas &rarr;</a>
       </div></span>
-      <a href="/about/">About</a>
+      <a href="/about/">About Us</a>
+      <a href="/faq/">FAQ</a>
       <a href="/contact/">Contact</a>
     </nav>
-    <a class="nav-tel" href="tel:13235550142"><span class="nt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.4 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg></span>(323) 555-0142</a>
+    <div class="nav-actions">
+      <a class="nav-tel" href="tel:13235550142"><span class="nt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.4 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg></span>(323) 555-0142</a>
+      <a class="nav-est" href="#estimate">Get Estimate</a>
+    </div>
     <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navdrawer"><span class="bars"></span></button>
   </div>
   <div class="mega" id="mega-services" hidden>
@@ -856,7 +816,7 @@ body.nav-open{overflow:hidden}
           <a class="mega-all" href="/retaining-wall-installation/">View all &rarr;</a>
         </div>
         <div class="mega-col">
-          <h4><a href="/retaining-walls/">Retaining Walls</a></h4>
+          <h4><a href="/retaining-walls/">Retaining Wall Types</a></h4>
           <a href="/retaining-walls/block-retaining-walls/">Block Retaining Walls</a>
           <a href="/retaining-walls/concrete-retaining-walls/">Concrete Retaining Walls</a>
           <a href="/retaining-walls/cmu-block-walls/">CMU Block Walls</a>
@@ -918,7 +878,7 @@ body.nav-open{overflow:hidden}
           </div>
         </div>
         <div class="nd-group2">
-          <button class="nd-acc2" type="button" aria-expanded="false">Retaining Walls<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+          <button class="nd-acc2" type="button" aria-expanded="false">Retaining Wall Types<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
           <div class="nd-sub2" hidden>
             <a href="/retaining-walls/block-retaining-walls/">Block Retaining Walls</a>
             <a href="/retaining-walls/concrete-retaining-walls/">Concrete Retaining Walls</a>
@@ -975,7 +935,8 @@ body.nav-open{overflow:hidden}
           </div>
         </div>
       </div>
-      <a href="/about/">About</a>
+      <a href="/about/">About Us</a>
+      <a href="/faq/">FAQ</a>
       <a href="/contact/">Contact</a>
     </nav>
     <div class="nd-cta">
@@ -1133,86 +1094,6 @@ body.nav-open{overflow:hidden}
         <li><strong>Any paperwork you already have.</strong> A soils report, old plans, an HOA assessment or another contractor's scope. All of it saves time and some of it saves money.</li>
       </ul>
   </article></div>
-</section>
-<!-- ===== HOW WE WORK ===== -->
-<section class="dark">
-  <div class="wrap">
-    <div class="sec-head center">
-      <div class="eyebrow center light">What to expect</div>
-      <h2 class="sec">From First Call to Booked Estimate</h2>
-      <p class="lede" style="margin-inline:auto">Five short stages, none of which commit you to anything.</p>
-    </div>
-    <div class="steps">
-      <div class="step"><div class="n">1</div><h3>You get in touch</h3><p>By phone, email or the form. Photos help but are not required.</p></div>
-      <div class="step"><div class="n">2</div><h3>A few questions</h3><p>Height, length, what is above the wall and what it is doing now.</p></div>
-      <div class="step"><div class="n">3</div><h3>Site visit booked</h3><p>Free, on site, and usually within a few working days.</p></div>
-      <div class="step"><div class="n">4</div><h3>Written scope</h3><p>Itemised by line so it can be compared against other bids.</p></div>
-      <div class="step"><div class="n">5</div><h3>Your decision</h3><p>Take it away. No follow-up pressure and no deadline attached.</p></div>
-    </div>
-  </div>
-</section>
-<!-- ===== AREAS ===== -->
-<section>
-  <div class="wrap">
-    <div class="sec-head center">
-      <div class="eyebrow center">Where we work</div>
-      <h2 class="sec">Communities We Cover Across Los Angeles County</h2>
-      <p class="lede" style="margin-inline:auto">Estimates are booked across all seventeen. If your property sits just outside, call anyway and we will tell you honestly whether we are the right people for it.</p>
-    </div>
-      <ul class="arealinks">
-        <li><a href="/areas/sherman-oaks/">Sherman Oaks</a></li>
-        <li><a href="/areas/studio-city/">Studio City</a></li>
-        <li><a href="/areas/encino/">Encino</a></li>
-        <li><a href="/areas/tarzana/">Tarzana</a></li>
-        <li><a href="/areas/woodland-hills/">Woodland Hills</a></li>
-        <li><a href="/areas/calabasas/">Calabasas</a></li>
-        <li><a href="/areas/glendale/">Glendale</a></li>
-        <li><a href="/areas/burbank/">Burbank</a></li>
-        <li><a href="/areas/la-canada-flintridge/">La Cañada Flintridge</a></li>
-        <li><a href="/areas/pasadena/">Pasadena</a></li>
-        <li><a href="/areas/hollywood-hills/">Hollywood Hills</a></li>
-        <li><a href="/areas/beverly-hills/">Beverly Hills</a></li>
-        <li><a href="/areas/brentwood/">Brentwood</a></li>
-        <li><a href="/areas/pacific-palisades/">Pacific Palisades</a></li>
-        <li><a href="/areas/malibu/">Malibu</a></li>
-        <li><a href="/areas/thousand-oaks/">Thousand Oaks</a></li>
-        <li><a href="/areas/long-beach/">Long Beach</a></li>
-      </ul>
-  </div>
-</section>
-<!-- ===== FAQ ===== -->
-<section>
-  <div class="wrap narrow">
-    <div class="sec-head center">
-      <div class="eyebrow center">Questions</div>
-      <h2 class="sec">Contact FAQ's</h2>
-      <p class="lede" style="margin-inline:auto">The questions we get asked before the first visit.</p>
-    </div>
-    <details class="q" open>
-      <summary>How quickly can you come out?</summary>
-      <p>For most enquiries within a few working days, and sooner where a wall is actively moving. If you are describing a wall that has shifted noticeably, tell us on the call &mdash; that moves up the list.</p>
-    </details>
-    <details class="q">
-      <summary>Do you charge for an estimate?</summary>
-      <p>No. On-site estimates are free and carry no obligation. What you get at the end is an itemised written scope you can compare against anyone else's.</p>
-    </details>
-    <details class="q">
-      <summary>Do you take on small jobs?</summary>
-      <p>Yes. Low garden walls and short runs are a normal part of the work, and a small wall built properly still needs the same <a href="/retaining-wall-installation/wall-drainage/">drainage</a> and <a href="/retaining-wall-installation/base-preparation/">base preparation</a> as a large one.</p>
-    </details>
-    <details class="q">
-      <summary>Can you just tell me if my wall is safe?</summary>
-      <p>We can tell you what we see and what it suggests, in writing. Where a wall is threatening a structure or a neighbouring property, that needs an engineer's assessment rather than a contractor's opinion, and we will say so plainly rather than reassure you.</p>
-    </details>
-    <details class="q">
-      <summary>Which areas do you cover?</summary>
-      <p>Seventeen communities across Los Angeles County and the surrounding hillside cities &mdash; the full list is below. If you are just outside it, call anyway and we will tell you honestly whether we are the right people for the job.</p>
-    </details>
-    <details class="q">
-      <summary>What if I already have a quote from someone else?</summary>
-      <p>Bring it. A second itemised scope is genuinely useful even if you do not use us, because the line items are where the differences between bids actually live &mdash; particularly <a href="/retaining-wall-installation/wall-drainage/">the drainage</a>, which is the easiest thing to leave out of a cheap quote.</p>
-    </details>
-  </div>
 </section>
 
 <!-- ===== FINAL CTA ===== -->
@@ -1377,11 +1258,15 @@ body.nav-open{overflow:hidden}
 </script>
 
 <script>
+/* Only one desktop dropdown may be open at a time. */
+function shut(id,trig){var p=document.getElementById(id);if(!p||p.hidden)return;p.hidden=true;var b=document.querySelector(trig);if(b)b.setAttribute('aria-expanded','false');}
+</script>
+<script>
 (function(){                                   /* desktop mega menu */
   var t = document.querySelector('.megatrig'), m = document.getElementById('mega-services');
   if (!t || !m) return;
   var head = t.closest('header'), timer = null;
-  function show(){ clearTimeout(timer); m.hidden = false; t.setAttribute('aria-expanded','true'); }
+  function show(){ clearTimeout(timer); shut('area-drop','.areatrig'); m.hidden = false; t.setAttribute('aria-expanded','true'); }
   function hide(){ m.hidden = true; t.setAttribute('aria-expanded','false'); }
   function lazyHide(){ clearTimeout(timer); timer = setTimeout(hide, 160); }
   t.closest('.nav-mega').addEventListener('mouseenter', show);
@@ -1413,7 +1298,7 @@ body.nav-open{overflow:hidden}
   var t=document.querySelector('.areatrig'), d=document.getElementById('area-drop');
   if(!t||!d) return;
   var head=t.closest('header'), timer=null;
-  function show(){ clearTimeout(timer); d.hidden=false; t.setAttribute('aria-expanded','true'); }
+  function show(){ clearTimeout(timer); shut('mega-services','.megatrig'); d.hidden=false; t.setAttribute('aria-expanded','true'); }
   function hide(){ d.hidden=true; t.setAttribute('aria-expanded','false'); }
   function lazyHide(){ clearTimeout(timer); timer=setTimeout(hide,160); }
   t.closest('.nav-areas').addEventListener('mouseenter',show);

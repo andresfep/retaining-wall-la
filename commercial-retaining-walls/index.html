@@ -601,6 +601,15 @@ body.nav-open{overflow:hidden}
     }
   ]
 }</script>
+<style>
+.nav-actions{display:flex;align-items:center;gap:10px;flex:none}
+.nav-est{display:inline-flex;align-items:center;font-weight:700;font-size:14.5px;letter-spacing:.01em;
+  color:var(--navy-900);border:1.5px solid #C9D0D6;background:#fff;padding:13px 18px;border-radius:4px;
+  transition:border-color .16s,background .16s,color .16s}
+.nav-est:hover{border-color:var(--navy-900);background:var(--navy-900);color:#fff}
+@media(max-width:1240px){.nav-est{padding:11px 14px;font-size:13.5px}}
+@media(max-width:1150px){.nav-est{display:none}}
+</style>
 </head>
 <body>
 
@@ -626,8 +635,8 @@ body.nav-open{overflow:hidden}
       <span class="name">Retaining Wall<br>Contractors<small>LOS ANGELES, CA</small></span>
     </a>
     <nav class="main">
+      <a href="/">Home</a>
       <span class="nav-mega"><button class="megatrig" type="button" aria-expanded="false" aria-controls="mega-services">Services<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button></span>
-      <a href="/retaining-walls/">Wall Types</a>
       <span class="nav-areas"><button class="areatrig" type="button" aria-expanded="false" aria-controls="area-drop">Service Areas<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
       <div class="areadrop" id="area-drop" hidden>
         <h4>Where We Serve</h4>
@@ -652,10 +661,14 @@ body.nav-open{overflow:hidden}
         </div>
         <a class="areadrop-all" href="/#areas">View all service areas &rarr;</a>
       </div></span>
-      <a href="/about/">About</a>
+      <a href="/about/">About Us</a>
+      <a href="/faq/">FAQ</a>
       <a href="/contact/">Contact</a>
     </nav>
-    <a class="nav-tel" href="tel:13235550142"><span class="nt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.4 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg></span>(323) 555-0142</a>
+    <div class="nav-actions">
+      <a class="nav-tel" href="tel:13235550142"><span class="nt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.4 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg></span>(323) 555-0142</a>
+      <a class="nav-est" href="#estimate">Get Estimate</a>
+    </div>
     <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navdrawer"><span class="bars"></span></button>
   </div>
   <div class="mega" id="mega-services" hidden>
@@ -680,7 +693,7 @@ body.nav-open{overflow:hidden}
           <a class="mega-all" href="/retaining-wall-installation/">View all &rarr;</a>
         </div>
         <div class="mega-col">
-          <h4><a href="/retaining-walls/">Retaining Walls</a></h4>
+          <h4><a href="/retaining-walls/">Retaining Wall Types</a></h4>
           <a href="/retaining-walls/block-retaining-walls/">Block Retaining Walls</a>
           <a href="/retaining-walls/concrete-retaining-walls/">Concrete Retaining Walls</a>
           <a href="/retaining-walls/cmu-block-walls/">CMU Block Walls</a>
@@ -742,7 +755,7 @@ body.nav-open{overflow:hidden}
           </div>
         </div>
         <div class="nd-group2">
-          <button class="nd-acc2" type="button" aria-expanded="false">Retaining Walls<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+          <button class="nd-acc2" type="button" aria-expanded="false">Retaining Wall Types<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
           <div class="nd-sub2" hidden>
             <a href="/retaining-walls/block-retaining-walls/">Block Retaining Walls</a>
             <a href="/retaining-walls/concrete-retaining-walls/">Concrete Retaining Walls</a>
@@ -799,7 +812,8 @@ body.nav-open{overflow:hidden}
           </div>
         </div>
       </div>
-      <a href="/about/">About</a>
+      <a href="/about/">About Us</a>
+      <a href="/faq/">FAQ</a>
       <a href="/contact/">Contact</a>
     </nav>
     <div class="nd-cta">
@@ -1492,11 +1506,15 @@ body.nav-open{overflow:hidden}
 </script>
 
 <script>
+/* Only one desktop dropdown may be open at a time. */
+function shut(id,trig){var p=document.getElementById(id);if(!p||p.hidden)return;p.hidden=true;var b=document.querySelector(trig);if(b)b.setAttribute('aria-expanded','false');}
+</script>
+<script>
 (function(){                                   /* desktop mega menu */
   var t = document.querySelector('.megatrig'), m = document.getElementById('mega-services');
   if (!t || !m) return;
   var head = t.closest('header'), timer = null;
-  function show(){ clearTimeout(timer); m.hidden = false; t.setAttribute('aria-expanded','true'); }
+  function show(){ clearTimeout(timer); shut('area-drop','.areatrig'); m.hidden = false; t.setAttribute('aria-expanded','true'); }
   function hide(){ m.hidden = true; t.setAttribute('aria-expanded','false'); }
   function lazyHide(){ clearTimeout(timer); timer = setTimeout(hide, 160); }
   t.closest('.nav-mega').addEventListener('mouseenter', show);
@@ -1528,7 +1546,7 @@ body.nav-open{overflow:hidden}
   var t=document.querySelector('.areatrig'), d=document.getElementById('area-drop');
   if(!t||!d) return;
   var head=t.closest('header'), timer=null;
-  function show(){ clearTimeout(timer); d.hidden=false; t.setAttribute('aria-expanded','true'); }
+  function show(){ clearTimeout(timer); shut('mega-services','.megatrig'); d.hidden=false; t.setAttribute('aria-expanded','true'); }
   function hide(){ d.hidden=true; t.setAttribute('aria-expanded','false'); }
   function lazyHide(){ clearTimeout(timer); timer=setTimeout(hide,160); }
   t.closest('.nav-areas').addEventListener('mouseenter',show);
