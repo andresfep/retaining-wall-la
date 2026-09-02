@@ -1,0 +1,14 @@
+{
+  // Static-site Worker for retainingwallcontractorlosangeles.com.
+  // The site is plain HTML — there is no Worker script, just assets served
+  // straight from the repository root, so "main" is deliberately absent.
+  "name": "retaining-wall-la",
+  "compatibility_date": "2025-09-01",
+  "assets": {
+    "directory": "./",
+    // /about/ resolves to /about/index.html, and /about redirects to /about/
+    "html_handling": "auto-trailing-slash",
+    // Unknown paths get our own 404 page rather than a bare Cloudflare error
+    "not_found_handling": "404-page"
+  }
+}
