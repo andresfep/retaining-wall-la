@@ -604,6 +604,7 @@ body.nav-open{overflow:hidden}
       "url": "https://retainingwallcontractorlosangeles.com/",
       "telephone": "+1-323-555-0142",
       "email": "hello@retainingwallcontractorlosangeles.com",
+      "foundingDate": "2007",
       "areaServed": [
         {
           "@type": "City",
@@ -738,6 +739,43 @@ body.nav-open{overflow:hidden}
 .arealinks a:hover{border-bottom-color:var(--gold)}
 @media(max-width:900px){.cmeth{grid-template-columns:1fr}.arealinks{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.frow{grid-template-columns:1fr}.arealinks{grid-template-columns:1fr}}
+</style>
+
+<style>
+/* About: text column beside a sticky photo + at-a-glance rail */
+.abx{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(28px,3.4vw,54px);align-items:start}
+.abx-main>h2:first-child{margin-top:0}
+.abx-main h2{font-family:var(--serif);font-weight:800;font-size:clamp(25px,2.5vw,32px);line-height:1.06;
+  letter-spacing:-.015em;color:var(--navy-900);margin:38px 0 14px}
+.abx-main h2:first-of-type{margin-top:0}
+.abx-main p{margin-bottom:15px}
+.abx-rail{position:sticky;top:24px;display:grid;gap:18px}
+.abx-photo{display:block;width:100%;aspect-ratio:3/4;overflow:hidden;background:var(--navy-900)}
+.abx-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.glance{border:1px solid var(--line);border-top:4px solid var(--gold);background:#fff;padding:24px 24px 22px}
+.glance h3{font-family:var(--serif);font-weight:700;font-size:20px;letter-spacing:-.01em;color:var(--navy-900);margin-bottom:16px}
+.glance ul{list-style:none;display:grid;gap:14px;margin-bottom:20px}
+.glance li{display:grid;grid-template-columns:20px 1fr;gap:13px;align-items:start;font-size:14.5px;line-height:1.5;color:var(--muted)}
+.glance li svg{width:18px;height:18px;color:var(--gold);margin-top:2px;flex:none}
+.glance li strong{color:var(--navy-900);font-weight:700}
+.glance .btn{width:100%}
+.glance .micro{font-size:12.5px;color:var(--muted);text-align:center;margin-top:11px;line-height:1.5}
+
+/* Contact: info cards beside the form */
+.cx{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(20px,2.4vw,34px);align-items:start}
+.cx-cards{display:grid;gap:14px;align-content:start}
+.ccard{border:1px solid var(--line);background:#fff;padding:20px 22px;display:grid;grid-template-columns:42px 1fr;gap:15px;align-items:start}
+.ccard .ci{width:42px;height:42px;display:grid;place-items:center;border-radius:50%;background:var(--navy-900);color:var(--gold-lt)}
+.ccard .ci svg{width:18px;height:18px}
+.ccard h3{font-family:var(--sans);font-weight:700;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:6px}
+.ccard .big{display:block;font-family:var(--serif);font-weight:800;font-size:22px;line-height:1.15;letter-spacing:-.015em;color:var(--navy-900);word-break:break-word}
+.ccard .big a{color:inherit}
+.ccard p{font-size:14px;color:var(--muted);margin:6px 0 0;line-height:1.55}
+.ccard dl{display:grid;grid-template-columns:1fr auto;gap:5px 16px;font-size:14.5px;margin-top:2px}
+.ccard dt{color:var(--muted)}
+.ccard dd{font-weight:700;color:var(--navy-900);text-align:right;font-variant-numeric:tabular-nums}
+@media(max-width:960px){.abx,.cx{grid-template-columns:1fr}.abx-rail{position:static}
+  .abx-photo{aspect-ratio:16/10;max-height:420px}}
 </style>
 </head>
 <body>
@@ -993,38 +1031,49 @@ body.nav-open{overflow:hidden}
   </div>
 </div>
 
-<!-- ===== CONTACT METHODS ===== -->
-<section>
-  <div class="wrap">
-    <div class="cmeth">
-      <a class="cm" href="tel:13235550142">
-        <span class="cm-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.4 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg></span>
-        <h3>Call us</h3>
-        <span class="cm-val">(323) 555-0142</span>
-        <p>The fastest way to reach us. If we are on a slope and miss you, leave a message and we call back the same working day.</p>
-      </a>
-      <a class="cm" href="mailto:hello@retainingwallcontractorlosangeles.com">
-        <span class="cm-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
-        <h3>Email us</h3>
-        <span class="cm-val">hello@retainingwallcontractorlosangeles.com</span>
-        <p>Best if you have photos. A few pictures of the wall and the slope above it tell us more than a long description.</p>
-      </a>
-      <div class="cm">
-        <span class="cm-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
-        <h3>Opening hours</h3>
-        <span class="cm-val">Mon&ndash;Fri 7:00am &ndash; 6:00pm</span>
-        <p>Saturdays 8:00am &ndash; 2:00pm. Closed Sundays. Estimates are booked during these hours across Los Angeles County.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- ===== BODY + SIDEBAR ===== -->
+<!-- ===== CONTACT BODY ===== -->
 <section class="pagebody">
-  <div class="wrap cols">
-    <article>
-      <h2>How to Reach Us</h2>
-      <p>The quickest route to an answer is the phone. Most retaining wall questions come down to a handful of things &mdash; how tall, how long, what is above it, what is below it, and what the wall is doing now &mdash; and those are faster to work through in a two-minute conversation than over email.</p>
-      <p>If it is easier to write, email works just as well, and it is the better option when you have photographs. Pictures of the wall face, the ground above it and the ground below it will usually tell us more than a page of description, and they let us give you a far more useful first answer before anyone drives out.</p>
+  <div class="wrap">
+    <div class="cx">
+      <div class="cx-cards">
+      <div class="ccard">
+        <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.4 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg></span>
+        <div>
+          <h3>Call or text</h3>
+          <span class="big"><a href="tel:13235550142">(323) 555-0142</a></span>
+          <p>The fastest way to reach us. If we are on a slope and miss you, leave a message and we call back the same working day.</p>
+        </div>
+      </div>
+      <div class="ccard">
+        <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+        <div>
+          <h3>Email</h3>
+          <span class="big" style="font-size:16.5px"><a href="mailto:hello@retainingwallcontractorlosangeles.com">hello@retainingwallcontractorlosangeles.com</a></span>
+          <p>Best if you have photos. A few pictures of the wall and the slope above it tell us more than a long description.</p>
+        </div>
+      </div>
+      <div class="ccard">
+        <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+        <div>
+          <h3>Hours</h3>
+          <dl>
+            <dt>Monday &ndash; Friday</dt><dd>7:00am &ndash; 6:00pm</dd>
+            <dt>Saturday</dt><dd>8:00am &ndash; 2:00pm</dd>
+            <dt>Sunday</dt><dd>Closed</dd>
+          </dl>
+          <p>Estimates are booked during these hours across Los Angeles County.</p>
+        </div>
+      </div>
+      <div class="ccard">
+        <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-5.5 7-11a7 7 0 10-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg></span>
+        <div>
+          <h3>Where we work</h3>
+          <span class="big" style="font-size:19px">17 communities across Los Angeles County</span>
+          <p>Concentrated in the foothill and canyon neighbourhoods. Just outside? Call anyway and we will tell you honestly whether we are the right people for it.</p>
+        </div>
+      </div>
+      </div>
+      <div>
       <div class="cform">
         <h3>Request a free on-site estimate</h3>
         <p class="hint">Tell us what the slope is doing. We read every message and reply during working hours &mdash; usually the same day.</p>
@@ -1058,70 +1107,32 @@ body.nav-open{overflow:hidden}
           <div class="fmsg" id="f-msg-out" role="status" aria-live="polite"></div>
         </form>
       </div>
-      <h2>What Happens After You Get in Touch</h2>
-      <ul class="checklist">
-        <li><strong>We ask a few questions first.</strong> Height, length, what the wall is retaining and what it is doing now. This is how we work out whether you need a site visit this week or a conversation about options.</li>
-        <li><strong>We come and walk the slope.</strong> Estimates are done on site, free, and with no obligation. Walls cannot be priced properly from a photograph, and anyone who quotes you a firm number without visiting is guessing.</li>
-        <li><strong>You get an itemised written scope.</strong> Materials, drainage, footing, backfill, engineering and permit coordination as separate lines, so you can compare it against other bids on more than the total.</li>
-        <li><strong>We tell you what we would not do.</strong> If a repair will hold, we will say so. If it will not, we will say that too, even when the larger job is the one we would rather sell you.</li>
-        <li><strong>No pressure to decide on the spot.</strong> The scope is yours to take away, sit on, and come back to. Retaining walls are rarely an impulse purchase and we do not treat them as one.</li>
-        <li><strong>Then you decide.</strong> If you want to go ahead we book it in and set out the programme in writing before anyone starts digging.</li>
-      </ul>
-      <h2>What Helps Us Give You a Useful Answer</h2>
-      <p>None of this is required &mdash; call with none of it and we will work it out together. But if you have it to hand, it makes the first conversation considerably more productive.</p>
-      <ul class="checklist">
-        <li><strong>Rough height and length.</strong> Even approximate figures change the answer completely. A three-foot garden wall and a nine-foot hillside wall are different projects with different rules.</li>
-        <li><strong>What sits above the wall.</strong> A lawn, a driveway, a pool, a structure, or another wall. Anything that loads the ground behind a wall changes what the wall has to be.</li>
-        <li><strong>What the wall is doing.</strong> Leaning, cracking, bulging, weeping after rain, or nothing yet. If you are not sure which, that is fine &mdash; a photo generally settles it.</li>
-        <li><strong>Whether it has drainage.</strong> Look for a pipe daylighting at one end or weep holes across the face. A great many older Los Angeles walls have neither, and it is usually the root of the problem.</li>
-        <li><strong>Photos, if you can.</strong> Straight on at the face, along the wall from one end, and one showing the ground above it. Three pictures are worth a long email.</li>
-        <li><strong>Any paperwork you already have.</strong> A soils report, old plans, an HOA assessment or a previous contractor's scope. All of it saves time and some of it saves money.</li>
-      </ul>
-      <h2>Contact FAQ's</h2>
-      <details class="q" open>
-        <summary>How quickly can you come out?</summary>
-        <p>For most enquiries within a few working days, and sooner where a wall is actively moving. If you are describing a wall that has shifted noticeably, tell us on the call &mdash; that moves up the list.</p>
-      </details>
-      <details class="q">
-        <summary>Do you charge for an estimate?</summary>
-        <p>No. On-site estimates are free and carry no obligation. What you get at the end is an itemised written scope you can compare against anyone else's.</p>
-      </details>
-      <details class="q">
-        <summary>Do you take on small jobs?</summary>
-        <p>Yes. Low garden walls and short runs are a normal part of the work, and a small wall built properly still needs the same <a href="/retaining-wall-installation/wall-drainage/">drainage</a> and <a href="/retaining-wall-installation/base-preparation/">base preparation</a> as a large one.</p>
-      </details>
-      <details class="q">
-        <summary>Can you just tell me if my wall is safe?</summary>
-        <p>We can tell you what we see and what it suggests, in writing. Where a wall is threatening a structure or a neighbouring property, that needs an engineer's assessment rather than a contractor's opinion, and we will say so plainly rather than reassure you.</p>
-      </details>
-      <details class="q">
-        <summary>Which areas do you cover?</summary>
-        <p>Seventeen communities across Los Angeles County and the surrounding hillside cities &mdash; the full list is below. If you are just outside it, call anyway and we will tell you honestly whether we are the right people for the job.</p>
-      </details>
-      <details class="q">
-        <summary>What if I already have a quote from someone else?</summary>
-        <p>Bring it. A second itemised scope is genuinely useful even if you do not use us, because the line items are where the differences between bids actually live &mdash; particularly <a href="/retaining-wall-installation/wall-drainage/">the drainage</a>, which is the easiest thing to leave out of a cheap quote.</p>
-      </details>
-    </article>
-
-    <aside>
-      <div class="side-cta">
-        <h3>Free on-site estimate</h3>
-        <p>We&rsquo;ll walk the slope, tell you what the wall actually needs, and leave you with an itemised written scope you can compare against other bids.</p>
-        <a class="btn" href="tel:13235550142">Call (323) 555-0142</a>
-        <p class="micro">Mon&ndash;Fri 7am&ndash;6pm &middot; Sat 8am&ndash;2pm<br>No obligation, no pressure to sign on the spot</p>
       </div>
-      <ul class="side-list">
-        <h4>Included as standard</h4>
-        <li>Engineered footing sized to load</li>
-        <li>Full drainage system</li>
-        <li>Compacted backfill in lifts</li>
-        <li>Progress photos before backfill</li>
-        <li>Permit &amp; plan check coordination</li>
-        <li>Written workmanship warranty</li>
-      </ul>
-    </aside>
+    </div>
   </div>
+  <div class="wrap narrow" style="padding-top:clamp(34px,4vw,58px)"><article>
+      <h2>How to reach us</h2>
+      <p>The quickest route to an answer is the phone. Most retaining wall questions come down to a handful of things &mdash; how tall, how long, what sits above it, what sits below it, and what the wall is doing now &mdash; and those are faster to work through in a two-minute conversation than over email.</p>
+      <p>If writing is easier, the form works just as well, and it is the better option when you have photographs. Pictures of the wall face, the ground above it and the ground below it tell us more than a page of description, and they let us give you a far more useful first answer before anyone drives out.</p>
+      <h2>What happens after you get in touch</h2>
+      <ul class="checklist">
+        <li><strong>We ask a few questions first.</strong> Height, length, what the wall is retaining and what it is doing now. That settles whether you need a site visit this week or a conversation about options.</li>
+        <li><strong>We come and walk the slope.</strong> On site, free, no obligation. Anyone quoting a firm number without visiting is guessing.</li>
+        <li><strong>You get an itemised written scope.</strong> Materials, drainage, footing, backfill, engineering and permit coordination as separate lines, so it can be compared on more than the total.</li>
+        <li><strong>We tell you what we would not do.</strong> If a repair will hold we say so. If it will not, we say that too, even when the larger job is the one we would rather sell.</li>
+        <li><strong>No pressure to decide on the spot.</strong> The scope is yours to take away and sit on. Retaining walls are rarely an impulse purchase and we do not treat them as one.</li>
+      </ul>
+      <h2>What helps us give you a useful answer</h2>
+      <p>None of this is required &mdash; call with none of it and we will work it out together. But if you have it to hand, the first conversation goes a lot further.</p>
+      <ul class="checklist">
+        <li><strong>Rough height and length.</strong> Even approximate figures change the answer. A three-foot garden wall and a nine-foot hillside wall are different projects under different rules.</li>
+        <li><strong>What sits above the wall.</strong> A lawn, a driveway, a pool, a structure, or another wall. Anything loading the ground behind a wall changes what the wall has to be.</li>
+        <li><strong>What the wall is doing.</strong> <a href="/retaining-wall-repair/leaning-retaining-wall/">Leaning</a>, <a href="/retaining-wall-repair/wall-crack-repair/">cracking</a>, <a href="/retaining-wall-repair/bulging-wall-repair/">bulging</a>, weeping after rain, or nothing yet. Not sure which? A photo usually settles it.</li>
+        <li><strong>Whether it has drainage.</strong> Look for a pipe daylighting at one end or weep holes across the face. A great many older Los Angeles walls have neither, and that is usually the root of it.</li>
+        <li><strong>Photos, if you can.</strong> Straight on at the face, along the wall from one end, and one showing the ground above it. Three pictures beat a long email.</li>
+        <li><strong>Any paperwork you already have.</strong> A soils report, old plans, an HOA assessment or another contractor's scope. All of it saves time and some of it saves money.</li>
+      </ul>
+  </article></div>
 </section>
 <!-- ===== HOW WE WORK ===== -->
 <section class="dark">
@@ -1167,6 +1178,40 @@ body.nav-open{overflow:hidden}
         <li><a href="/areas/thousand-oaks/">Thousand Oaks</a></li>
         <li><a href="/areas/long-beach/">Long Beach</a></li>
       </ul>
+  </div>
+</section>
+<!-- ===== FAQ ===== -->
+<section>
+  <div class="wrap narrow">
+    <div class="sec-head center">
+      <div class="eyebrow center">Questions</div>
+      <h2 class="sec">Contact FAQ's</h2>
+      <p class="lede" style="margin-inline:auto">The questions we get asked before the first visit.</p>
+    </div>
+    <details class="q" open>
+      <summary>How quickly can you come out?</summary>
+      <p>For most enquiries within a few working days, and sooner where a wall is actively moving. If you are describing a wall that has shifted noticeably, tell us on the call &mdash; that moves up the list.</p>
+    </details>
+    <details class="q">
+      <summary>Do you charge for an estimate?</summary>
+      <p>No. On-site estimates are free and carry no obligation. What you get at the end is an itemised written scope you can compare against anyone else's.</p>
+    </details>
+    <details class="q">
+      <summary>Do you take on small jobs?</summary>
+      <p>Yes. Low garden walls and short runs are a normal part of the work, and a small wall built properly still needs the same <a href="/retaining-wall-installation/wall-drainage/">drainage</a> and <a href="/retaining-wall-installation/base-preparation/">base preparation</a> as a large one.</p>
+    </details>
+    <details class="q">
+      <summary>Can you just tell me if my wall is safe?</summary>
+      <p>We can tell you what we see and what it suggests, in writing. Where a wall is threatening a structure or a neighbouring property, that needs an engineer's assessment rather than a contractor's opinion, and we will say so plainly rather than reassure you.</p>
+    </details>
+    <details class="q">
+      <summary>Which areas do you cover?</summary>
+      <p>Seventeen communities across Los Angeles County and the surrounding hillside cities &mdash; the full list is below. If you are just outside it, call anyway and we will tell you honestly whether we are the right people for the job.</p>
+    </details>
+    <details class="q">
+      <summary>What if I already have a quote from someone else?</summary>
+      <p>Bring it. A second itemised scope is genuinely useful even if you do not use us, because the line items are where the differences between bids actually live &mdash; particularly <a href="/retaining-wall-installation/wall-drainage/">the drainage</a>, which is the easiest thing to leave out of a cheap quote.</p>
+    </details>
   </div>
 </section>
 
