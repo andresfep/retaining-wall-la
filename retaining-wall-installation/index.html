@@ -450,11 +450,11 @@ body.nav-open{overflow:hidden}
   border-bottom:1px solid var(--line);box-shadow:0 22px 44px rgba(11,23,33,.16);z-index:90}
 .mega[hidden]{display:none}
 .mega-cols{display:grid;grid-template-columns:repeat(5,1fr);gap:32px;padding:34px 0 30px}
-.mega-col h4{font-family:var(--sans);font-weight:700;font-size:12.5px;letter-spacing:.15em;
+.mega-col .mega-h{font-family:var(--sans);font-weight:700;font-size:12.5px;letter-spacing:.15em;
   text-transform:uppercase;color:var(--navy-900);padding-bottom:12px;margin-bottom:14px;
   border-bottom:1px solid var(--line)}
-.mega-col h4 a{color:inherit}
-.mega-col h4 a:hover{color:var(--green)}
+.mega-col .mega-h a{color:inherit}
+.mega-col .mega-h a:hover{color:var(--green)}
 .mega-col a{display:block;font-size:14.5px;color:#41505C;padding:7px 0}
 .mega-col a:hover{color:var(--green)}
 .mega-all{margin-top:12px;font-weight:700;font-size:13px;letter-spacing:.04em;color:var(--gold-dk)!important}
@@ -493,7 +493,7 @@ body.nav-open{overflow:hidden}
   background:#fff;border-top:3px solid var(--gold);border-bottom:1px solid var(--line);
   box-shadow:0 22px 44px rgba(11,23,33,.18);z-index:95;border-radius:0 0 4px 4px}
 .areadrop[hidden]{display:none}
-.areadrop h4{font-family:var(--sans);font-weight:700;font-size:12.5px;letter-spacing:.15em;text-transform:uppercase;
+.areadrop .ad-h{font-family:var(--sans);font-weight:700;font-size:12.5px;letter-spacing:.15em;text-transform:uppercase;
   color:var(--navy-900);padding:22px 24px 12px;margin:0 0 2px;border-bottom:1px solid var(--line)}
 .arealist{max-height:396px;overflow-y:auto;padding:6px 0;scrollbar-width:thin}
 .arealist::-webkit-scrollbar{width:8px}
@@ -638,7 +638,7 @@ body.nav-open{overflow:hidden}
       <span class="nav-mega"><button class="megatrig" type="button" aria-expanded="false" aria-controls="mega-services">Services<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button></span>
       <span class="nav-areas"><button class="areatrig" type="button" aria-expanded="false" aria-controls="area-drop">Service Areas<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
       <div class="areadrop" id="area-drop" hidden>
-        <h4>Where We Serve</h4>
+        <p class="ad-h">Where We Serve</p>
         <div class="arealist">
           <a href="/areas/beverly-hills/">Beverly Hills</a>
           <a href="/areas/brentwood/">Brentwood</a>
@@ -674,7 +674,7 @@ body.nav-open{overflow:hidden}
     <div class="wrap">
       <div class="mega-cols">
         <div class="mega-col">
-          <h4><a href="/retaining-wall-repair/">Retaining Wall Repair</a></h4>
+          <p class="mega-h"><a href="/retaining-wall-repair/">Retaining Wall Repair</a></p>
           <a href="/retaining-wall-repair/leaning-retaining-wall/">Leaning Retaining Wall</a>
           <a href="/retaining-wall-repair/bulging-wall-repair/">Bulging Wall Repair</a>
           <a href="/retaining-wall-repair/wall-crack-repair/">Wall Crack Repair</a>
@@ -683,7 +683,7 @@ body.nav-open{overflow:hidden}
           <a class="mega-all" href="/retaining-wall-repair/">View all 6 &rarr;</a>
         </div>
         <div class="mega-col">
-          <h4><a href="/retaining-wall-installation/">Retaining Wall Installation</a></h4>
+          <p class="mega-h"><a href="/retaining-wall-installation/">Retaining Wall Installation</a></p>
           <a href="/retaining-wall-installation/wall-drainage/">Wall Drainage</a>
           <a href="/retaining-wall-installation/base-preparation/">Base Preparation</a>
           <a href="/retaining-wall-installation/geogrid-reinforcement/">Geogrid Reinforcement</a>
@@ -692,7 +692,7 @@ body.nav-open{overflow:hidden}
           <a class="mega-all" href="/retaining-wall-installation/">View all &rarr;</a>
         </div>
         <div class="mega-col">
-          <h4><a href="/retaining-walls/">Retaining Wall Types</a></h4>
+          <p class="mega-h"><a href="/retaining-walls/">Retaining Wall Types</a></p>
           <a href="/retaining-walls/block-retaining-walls/">Block Retaining Walls</a>
           <a href="/retaining-walls/concrete-retaining-walls/">Concrete Retaining Walls</a>
           <a href="/retaining-walls/cmu-block-walls/">CMU Block Walls</a>
@@ -701,7 +701,7 @@ body.nav-open{overflow:hidden}
           <a class="mega-all" href="/retaining-walls/">View all 7 &rarr;</a>
         </div>
         <div class="mega-col">
-          <h4><a href="/hillside-retaining-walls/">Hillside Retaining Walls</a></h4>
+          <p class="mega-h"><a href="/hillside-retaining-walls/">Hillside Retaining Walls</a></p>
           <a href="/hillside-retaining-walls/slope-stabilization/">Slope Stabilization</a>
           <a href="/hillside-retaining-walls/caisson-soldier-pile-walls/">Caisson & Soldier Pile Walls</a>
           <a href="/hillside-retaining-walls/tieback-anchored-walls/">Tieback & Anchored Walls</a>
@@ -710,7 +710,7 @@ body.nav-open{overflow:hidden}
           <a class="mega-all" href="/hillside-retaining-walls/">View all 6 &rarr;</a>
         </div>
         <div class="mega-col">
-          <h4><a href="/commercial-retaining-walls/">Commercial Retaining Walls</a></h4>
+          <p class="mega-h"><a href="/commercial-retaining-walls/">Commercial Retaining Walls</a></p>
           <a href="/commercial-retaining-walls/parking-lot-retaining-walls/">Parking Lot Retaining Walls</a>
           <a href="/commercial-retaining-walls/multi-unit-hoa-walls/">Multi-Unit & HOA Walls</a>
           <a class="mega-all" href="/commercial-retaining-walls/">View all &rarr;</a>
