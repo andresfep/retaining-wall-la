@@ -561,6 +561,11 @@ body.nav-open{overflow:hidden}
   ]
 }
 </script>
+<style>
+/* The top bar duplicates the phone number, and below 900px the sticky
+   call bar takes over that job, so it is hidden rather than wrapped. */
+@media(max-width:900px){.topbar{display:none}}
+</style>
 </head>
 <body>
 
