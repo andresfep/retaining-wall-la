@@ -36,3 +36,39 @@ https://www.retainingwallcontractorlosangeles.com/*  https://retainingwallcontra
 
 # Old /services/ prefix retired
 /services/*                /:splat                                        301
+
+# Service area pages moved to /retaining-wall-contractor-<city>/
+/areas/beverly-hills/*          /retaining-wall-contractor-beverly-hills/:splat     301
+/areas/brentwood/*              /retaining-wall-contractor-brentwood/:splat         301
+/areas/burbank/*                /retaining-wall-contractor-burbank/:splat           301
+/areas/calabasas/*              /retaining-wall-contractor-calabasas/:splat         301
+/areas/encino/*                 /retaining-wall-contractor-encino/:splat            301
+/areas/glendale/*               /retaining-wall-contractor-glendale/:splat          301
+/areas/hollywood-hills/*        /retaining-wall-contractor-hollywood-hills/:splat   301
+/areas/la-canada-flintridge/*   /retaining-wall-contractor-la-canada-flintridge/:splat 301
+/areas/long-beach/*             /retaining-wall-contractor-long-beach/:splat        301
+/areas/malibu/*                 /retaining-wall-contractor-malibu/:splat            301
+/areas/pacific-palisades/*      /retaining-wall-contractor-pacific-palisades/:splat 301
+/areas/pasadena/*               /retaining-wall-contractor-pasadena/:splat          301
+/areas/sherman-oaks/*           /retaining-wall-contractor-sherman-oaks/:splat      301
+/areas/studio-city/*            /retaining-wall-contractor-studio-city/:splat       301
+/areas/tarzana/*                /retaining-wall-contractor-tarzana/:splat           301
+/areas/thousand-oaks/*          /retaining-wall-contractor-thousand-oaks/:splat     301
+/areas/woodland-hills/*         /retaining-wall-contractor-woodland-hills/:splat    301
+/areas/beverly-hills            /retaining-wall-contractor-beverly-hills/           301
+/areas/brentwood                /retaining-wall-contractor-brentwood/               301
+/areas/burbank                  /retaining-wall-contractor-burbank/                 301
+/areas/calabasas                /retaining-wall-contractor-calabasas/               301
+/areas/encino                   /retaining-wall-contractor-encino/                  301
+/areas/glendale                 /retaining-wall-contractor-glendale/                301
+/areas/hollywood-hills          /retaining-wall-contractor-hollywood-hills/         301
+/areas/la-canada-flintridge     /retaining-wall-contractor-la-canada-flintridge/    301
+/areas/long-beach               /retaining-wall-contractor-long-beach/              301
+/areas/malibu                   /retaining-wall-contractor-malibu/                  301
+/areas/pacific-palisades        /retaining-wall-contractor-pacific-palisades/       301
+/areas/pasadena                 /retaining-wall-contractor-pasadena/                301
+/areas/sherman-oaks             /retaining-wall-contractor-sherman-oaks/            301
+/areas/studio-city              /retaining-wall-contractor-studio-city/             301
+/areas/tarzana                  /retaining-wall-contractor-tarzana/                 301
+/areas/thousand-oaks            /retaining-wall-contractor-thousand-oaks/           301
+/areas/woodland-hills           /retaining-wall-contractor-woodland-hills/          301
