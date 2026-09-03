@@ -76,8 +76,8 @@ nav.main a:hover{color:var(--green)}
 .hero{position:relative;isolation:isolate;display:flex;align-items:center;
   min-height:clamp(400px,calc(100vh - 180px),648px);min-height:clamp(400px,calc(100svh - 180px),648px);background:var(--navy-900);color:#fff;overflow:hidden}
 .hero-media{position:absolute;inset:0;z-index:0}
-.hero-media img,
-
+.hero-media img{position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:62% 62%;display:block}
 .hero-media picture{position:absolute;inset:0;z-index:2}
 /* scrim: heavy left for legibility, clear right so the wall reads */
 .hero-scrim{position:absolute;inset:0;z-index:2;pointer-events:none;
@@ -374,7 +374,7 @@ nav.main{margin-left:auto;margin-right:22px}
   .hill-grid,.cost-grid,.nearme .cols{grid-template-columns:1fr;gap:40px}
   .hero{min-height:auto}
   .hero .wrap{padding-top:40px;padding-bottom:44px}
-  .hero-media img,
+  .hero-media img{object-position:70% 60%}
   .hero-scrim{background:linear-gradient(90deg,rgba(11,23,33,.97) 0%,rgba(11,23,33,.9) 46%,rgba(11,23,33,.62) 72%,rgba(11,23,33,.3) 100%),linear-gradient(180deg,rgba(11,23,33,.6),transparent 26%,rgba(11,23,33,.7))}
   .svc-grid{grid-template-columns:repeat(2,1fr)}
   .type-grid,.proj-grid,.signs{grid-template-columns:repeat(2,1fr)}
