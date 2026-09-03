@@ -241,7 +241,7 @@ details p{margin-top:13px;color:var(--muted);font-size:15.5px;max-width:74ch}
 .final::before{content:"";position:absolute;inset:0;opacity:.09;
   background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:48px 48px}
 .final .wrap{position:relative;z-index:2}
-.final h2{font-family:var(--serif);font-weight:800;font-size:clamp(32px,4.8vw,54px);line-height:1.02;letter-spacing:-.016em;text-transform:uppercase}
+.final p.final-h{margin:0;max-width:none;color:#fff;font-family:var(--serif);font-weight:800;font-size:clamp(32px,4.8vw,54px);line-height:1.02;letter-spacing:-.016em;text-transform:uppercase}
 .final p{margin:16px auto 30px;max-width:66ch;color:rgba(255,255,255,.88);font-size:17px}
 .final .cta-row{display:flex;gap:13px;justify-content:center;flex-wrap:wrap}
 .final .tapcall.center{margin-top:6px}
@@ -249,7 +249,7 @@ details p{margin-top:13px;color:var(--muted);font-size:15.5px;max-width:74ch}
 /* footer */
 footer{background:var(--navy-900);color:#8FA1AE;padding:60px 0 26px;font-size:14.5px;border-top:1px solid var(--navy-700)}
 .f-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:38px}
-footer h4{font-family:var(--sans);font-weight:700;text-transform:uppercase;color:#fff;font-size:12.5px;letter-spacing:.16em;margin-bottom:16px}
+footer p.f-h{font-family:var(--sans);font-weight:700;text-transform:uppercase;color:#fff;font-size:12.5px;letter-spacing:.16em;margin-bottom:16px}
 footer ul{list-style:none}
 footer li{margin-bottom:9px}
 footer a:hover{color:var(--gold-lt)}
@@ -294,9 +294,9 @@ footer .brand{margin-bottom:16px}
 /* ---- footer service-area index ---- */
 .f-areas{border-top:1px solid var(--navy-700);margin-top:40px;padding-top:32px}
 .f-areas-head{display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;margin-bottom:8px}
-.f-areas-head h4{margin-bottom:0}
+.f-areas-head p.f-h{margin-bottom:0}
 .f-areas-head span{font-size:13.5px;color:#7E909C}
-.f-areas h5{font-weight:700;text-transform:uppercase;color:#B7C4CE;font-size:12.5px;letter-spacing:.16em;margin:22px 0 18px}
+.f-areas p.f-sub{font-weight:700;text-transform:uppercase;color:#B7C4CE;font-size:12.5px;letter-spacing:.16em;margin:22px 0 18px}
 .f-area-list{display:grid;grid-template-columns:repeat(4,1fr);gap:14px 28px;list-style:none}
 .f-area-list li{margin:0}
 .f-area-list a{display:inline-flex;align-items:flex-start;gap:8px;font-size:14.5px;color:#8FA1AE;line-height:1.4}
@@ -1448,7 +1448,7 @@ body.nav-open{overflow:hidden}
 <!-- ===== FINAL CTA ===== -->
 <section class="final" id="estimate">
   <div class="wrap">
-    <h2>Get a free on-site estimate in Sherman Oaks</h2>
+    <p class="final-h">Get a free on-site estimate in Sherman Oaks</p>
     <p>We'll walk the slope, tell you what the wall actually needs, and leave you with an itemised written scope. No obligation, and no pressure to sign anything on the spot.</p>
     <div><a class="btn" href="tel:13235550142">Call (323) 555-0142</a></div>
     <div><a class="textlink" href="/contact/" style="margin-top:15px">Get a free estimate →</a></div>
@@ -1470,7 +1470,7 @@ body.nav-open{overflow:hidden}
         <p>Engineered retaining walls for Los Angeles hillsides. Stone, concrete, block and timber — with drainage, engineering and permits handled as part of the job.</p>
       </div>
       <div>
-        <h4>Our Services</h4>
+        <p class="f-h">Our Services</p>
         <ul>
           <li><a href="/retaining-wall-installation/">Retaining Wall Installation</a></li>
           <li><a href="/retaining-wall-repair/">Retaining Wall Repair</a></li>
@@ -1479,7 +1479,7 @@ body.nav-open{overflow:hidden}
         </ul>
       </div>
       <div>
-        <h4>Wall Types</h4>
+        <p class="f-h">Wall Types</p>
         <ul>
           <li><a href="/retaining-walls/stone-boulder-walls/">Stone Retaining Walls</a></li>
           <li><a href="/retaining-walls/wood-retaining-walls/">Wood Retaining Walls</a></li>
@@ -1487,7 +1487,7 @@ body.nav-open{overflow:hidden}
         </ul>
       </div>
       <div>
-        <h4>Contact Us</h4>
+        <p class="f-h">Contact Us</p>
         <ul class="f-contact">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-5.5 7-11a7 7 0 10-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg><span>Serving all of<br>Los Angeles County, CA</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.4 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg><a href="tel:13235550142">(323) 555-0142</a></li>
@@ -1499,10 +1499,10 @@ body.nav-open{overflow:hidden}
 
     <div class="f-areas">
       <div class="f-areas-head">
-        <h4>Service Areas</h4>
+        <p class="f-h">Service Areas</p>
         <span>Based in Los Angeles — serving 17 communities across LA County.</span>
       </div>
-      <h5>Retaining Wall Contractor — Cities We Serve</h5>
+      <p class="f-sub">Retaining Wall Contractor — Cities We Serve</p>
       <ul class="f-area-list">
         <li><a href="/areas/sherman-oaks/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 10-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>Retaining Walls in Sherman Oaks</a></li>
         <li><a href="/areas/studio-city/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 10-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>Retaining Walls in Studio City</a></li>
