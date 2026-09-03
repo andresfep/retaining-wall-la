@@ -73,11 +73,9 @@ nav.main a:hover{color:var(--green)}
 /* ===== PAGE HERO (photo, compact) ===== */
 .phero{position:relative;isolation:isolate;display:flex;align-items:center;min-height:clamp(220px,26vh,310px);background:var(--navy-900);color:#fff;overflow:hidden}
 .phero-media{position:absolute;inset:0;z-index:0}
-.phero-media img,.phero-media .hero-ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 58%;display:block}
+.phero-media img,
 .phero-media picture{position:absolute;inset:0;z-index:1}
-.phero-media .hero-ph{position:absolute;inset:0;z-index:0;background:
-  linear-gradient(140deg,#22333F 0%,#16293A 45%,#0E1B26 100%),
-  repeating-linear-gradient(45deg,rgba(255,255,255,.02) 0 18px,transparent 18px 36px)}
+
 /* centred copy needs an even scrim, not a left-weighted one */
 .phero-scrim{position:absolute;inset:0;z-index:2;pointer-events:none;
   background:
@@ -368,7 +366,7 @@ footer .brand .name{color:#fff}
   .f-grid{grid-template-columns:repeat(2,1fr)}
   .f-area-list{grid-template-columns:repeat(2,1fr)}
   .f-areas-head{gap:8px}
-  .phero-media img,.phero-media .hero-ph{object-position:center 58%}
+  .phero-media img,
   .phero-scrim{background:radial-gradient(140% 90% at 50% 50%,rgba(11,23,33,.76),rgba(11,23,33,.92) 70%),linear-gradient(180deg,rgba(11,23,33,.6),transparent 32%,rgba(11,23,33,.74))}
 }
 @media(max-width:640px){
@@ -833,7 +831,6 @@ body.nav-open{overflow:hidden}
 <!-- ===== HERO ===== -->
 <section class="phero">
   <div class="phero-media">
-    <span class="hero-ph" aria-hidden="true"></span>
     <picture>
       <source srcset="/img/hero-drainage-retrofit.avif" type="image/avif">
       <source srcset="/img/hero-drainage-retrofit.webp" type="image/webp">
@@ -1084,11 +1081,15 @@ body.nav-open{overflow:hidden}
         </ul>
       </div>
       <div>
-        <p class="f-h">Wall Types</p>
+        <p class="f-h">Retaining Walls</p>
         <ul>
-          <li><a href="/retaining-walls/stone-boulder-walls/">Stone Retaining Walls</a></li>
-          <li><a href="/retaining-walls/wood-retaining-walls/">Wood Retaining Walls</a></li>
+          <li><a href="/retaining-walls/block-retaining-walls/">Block Retaining Walls</a></li>
           <li><a href="/retaining-walls/concrete-retaining-walls/">Concrete Retaining Walls</a></li>
+          <li><a href="/retaining-walls/cmu-block-walls/">CMU Block Walls</a></li>
+          <li><a href="/retaining-walls/wood-retaining-walls/">Wood Retaining Walls</a></li>
+          <li><a href="/retaining-walls/stone-boulder-walls/">Stone &amp; Boulder Walls</a></li>
+          <li><a href="/retaining-walls/shotcrete-walls/">Shotcrete Walls</a></li>
+          <li><a href="/retaining-walls/gabion-walls/">Gabion Walls</a></li>
         </ul>
       </div>
       <div>
