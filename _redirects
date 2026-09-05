@@ -72,3 +72,5 @@ https://www.retainingwallcontractorlosangeles.com/*  https://retainingwallcontra
 /areas/tarzana                  /retaining-wall-contractor-tarzana/                 301
 /areas/thousand-oaks            /retaining-wall-contractor-thousand-oaks/           301
 /areas/woodland-hills           /retaining-wall-contractor-woodland-hills/          301
+/areas/west-hollywood/*        /retaining-wall-contractor-west-hollywood/:splat 301
+/areas/west-hollywood          /retaining-wall-contractor-west-hollywood/       301
