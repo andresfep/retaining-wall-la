@@ -611,6 +611,60 @@ body.nav-open{overflow:hidden}
 /* The top bar duplicates the phone number, and below 900px the sticky
    call bar takes over that job, so it is hidden rather than wrapped. */
 @media(max-width:900px){.topbar{display:none}}
+
+/* ---- Quote modal ------------------------------------------------------ */
+.qm-ov{position:fixed;inset:0;z-index:120;display:flex;align-items:flex-start;justify-content:center;
+  padding:24px 16px;overflow-y:auto;background:rgba(11,23,33,.74);-webkit-backdrop-filter:blur(3px);
+  backdrop-filter:blur(3px);opacity:0;transition:opacity .18s ease}
+.qm-ov.on{opacity:1}
+.qm-ov[hidden]{display:none}
+.qm{position:relative;width:100%;max-width:560px;margin:auto;background:var(--paper);
+  border-top:4px solid var(--gold);box-shadow:0 24px 60px rgba(11,23,33,.4);
+  transform:translateY(-10px);transition:transform .18s ease}
+.qm-ov.on .qm{transform:none}
+.qm-hd{background:var(--navy-900);color:#fff;padding:20px 26px 18px}
+.qm-hd .qm-t{font-family:var(--serif);font-size:25px;line-height:1.12;font-weight:800;
+  letter-spacing:-.01em;margin:0;color:#fff}
+.qm-hd .qm-s{margin:7px 0 0;font-size:14px;line-height:1.5;color:var(--sage);max-width:42ch}
+.qm-x{position:absolute;top:10px;right:10px;width:38px;height:38px;display:flex;align-items:center;
+  justify-content:center;background:none;border:0;color:#fff;font-size:26px;line-height:1;cursor:pointer;
+  opacity:.72;padding:0}
+.qm-x:hover{opacity:1}
+.qm-x:focus-visible{outline:2px solid var(--gold);outline-offset:-2px}
+.qm-bd{padding:22px 26px 26px}
+.qm-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.qm-row,.qm-f{min-width:0}
+.qm-f{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.qm-f label{font-size:13px;font-weight:700;letter-spacing:.02em;text-transform:uppercase;color:var(--navy-900)}
+.qm-f input,.qm-f textarea{font:inherit;font-size:15px;padding:11px 12px;border:1px solid var(--line);
+  background:#fcfcfb;color:inherit;border-radius:0;width:100%;max-width:100%;box-sizing:border-box}
+.qm-f input:focus,.qm-f textarea:focus{outline:2px solid var(--gold);outline-offset:1px;background:#fff}
+.qm-f input.bad,.qm-f textarea.bad{border-color:#a4341f;background:#fdf6f5}
+.qm-f textarea{min-height:104px;resize:vertical}
+.qm-f .req{color:#a4341f}
+.qm-bd button[type=submit]{font:inherit;font-weight:800;font-size:16px;letter-spacing:.02em;
+  text-transform:uppercase;width:100%;padding:15px 20px;border:0;cursor:pointer;
+  background:var(--gold);color:var(--navy-900)}
+.qm-bd button[type=submit]:hover{background:var(--gold-lt)}
+.qm-bd button[type=submit][disabled]{opacity:.6;cursor:default}
+.qm-note{margin:12px 0 0;font-size:13px;line-height:1.5;color:var(--muted)}
+.qm-note a{color:var(--green);font-weight:700}
+.qm-out{display:none;margin-top:14px;padding:13px 15px;border-left:4px solid #a4341f;
+  background:#fdf6f5;font-size:14.5px;line-height:1.55}
+.qm-out.on{display:block}
+.qm-out a{color:var(--green);font-weight:700}
+body.qm-lock{overflow:hidden}
+@media (max-width:560px){
+  .qm-ov{padding:0}
+  .qm{max-width:none;min-height:100%;border-top-width:3px}
+  .qm-hd{padding:18px 18px 16px}
+  .qm-hd .qm-t{font-size:22px}
+  .qm-bd{padding:18px}
+  .qm-row{grid-template-columns:1fr;gap:0}
+}
+@media (prefers-reduced-motion:reduce){
+  .qm-ov,.qm{transition:none}
+}
 </style>
 </head>
 <body>
@@ -1253,6 +1307,311 @@ function shut(id,trig){var p=document.getElementById(id);if(!p||p.hidden)return;
   document.addEventListener('click',function(e){
     if(!d.hidden && !d.contains(e.target) && !t.contains(e.target)) hide();
   });
+})();
+</script>
+<div class="qm-ov" id="qm-ov" hidden>
+  <div class="qm" role="dialog" aria-modal="true" aria-labelledby="qm-title">
+    <button type="button" class="qm-x" id="qm-x" aria-label="Close">&times;</button>
+    <div class="qm-hd">
+      <p class="qm-t" id="qm-title">Get a Free Estimate</p>
+      <p class="qm-s">Tell us about the wall and we will get back to you, usually the same working day.</p>
+    </div>
+    <div class="qm-bd">
+      <form id="qm-form" class="js-quote-form" novalidate>
+        <div class="qm-f"><label for="qm-name">Full Name <span class="req">*</span></label>
+          <input id="qm-name" name="name" type="text" autocomplete="name" required></div>
+        <div class="qm-row">
+          <div class="qm-f"><label for="qm-phone">Phone <span class="req">*</span></label>
+            <input id="qm-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel"
+                   placeholder="(323) 555-0142" maxlength="14" required></div>
+          <div class="qm-f"><label for="qm-zip">What&rsquo;s Your Zip</label>
+            <input id="qm-zip" name="zip" type="text" inputmode="numeric" autocomplete="postal-code"
+                   placeholder="90291" maxlength="5"></div>
+        </div>
+        <div class="qm-f"><label for="qm-email">Email</label>
+          <input id="qm-email" name="email" type="email" autocomplete="email" placeholder="you@example.com"></div>
+        <div class="qm-f"><label for="qm-service">What Service Do You Need</label>
+          <input id="qm-service" name="service" type="text"
+                 placeholder="Type the service you need &mdash; new wall, repair, drainage&hellip;"></div>
+        <div class="qm-f"><label for="qm-message">Tell Us About the Project</label>
+          <textarea id="qm-message" name="message"
+            placeholder="Roughly how tall and how long is the wall? Is it new work or an existing wall? If it is existing, what is it doing &mdash; leaning, cracking, bulging, weeping after rain?"></textarea></div>
+        <button type="submit">Request My Free Estimate</button>
+        <p class="qm-note">No obligation, and no pressure to sign anything on the spot. We will not pass your details to anyone else.</p>
+        <div class="qm-out" id="qm-out" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</div>
+<script>
+/* =====================================================================
+   Quote form + estimate modal  ->  GoHighLevel external tracking
+   ---------------------------------------------------------------------
+   Handles every form with class "js-quote-form": the pop-up that opens
+   from any "Get Estimate" link, and the full form on /contact/.
+
+   BEFORE THIS SENDS SERVICE / ZIP / MESSAGE TO NAMED CRM FIELDS you must
+   paste three custom-field IDs into CF below. Get them from
+   GoHighLevel > Settings > Custom Fields (copy the field ID, NOT the label).
+   While any of them is blank the answer is still delivered - it is appended
+   to the notes on the contact record instead, so no lead detail is lost.
+   ===================================================================== */
+(function () {
+  'use strict';
+
+  var TRACKING_ID = 'tk_bb42521e3ca94bc880c402c76f02e595';
+  var LOCATION_ID = 'NLYFL4jH0f4gpKZUK1Cp';
+
+  var CF = {
+    service: '',   /* <- custom field ID for "Service"          */
+    zip:     '',   /* <- custom field ID for "Zip"              */
+    message: ''    /* <- custom field ID for "Your Message"     */
+  };
+
+  var ENDPOINT = 'https://backend.leadconnectorhq.com/external-tracking/events';
+  var THANKS   = '/thank-you/';
+  var PHONE    = '(323) 555-0142';
+  var TEL      = 'tel:13235550142';
+  var EMAIL    = 'hello@retainingwallcontractorlosangeles.com';
+
+  /* ---- tracking transport ------------------------------------------ */
+  function postTrackingEvent(trackingPayload, options) {
+    options = options || {};
+    var customFields = options.customFields || {};
+    var eventPayload = {};
+    for (var k in trackingPayload) eventPayload[k] = trackingPayload[k];
+    eventPayload.formData   = shallow(trackingPayload.formData);
+    eventPayload.formLabels = shallow(trackingPayload.formLabels);
+
+    var body = new FormData();
+
+    for (var id in customFields) {
+      var field = customFields[id];
+      if (!field || field.value === undefined) continue;
+      eventPayload.formData[id]   = field.value;
+      eventPayload.formLabels[id] = field.label;
+    }
+    for (var key in eventPayload.formData) {
+      if (!eventPayload.formLabels[key]) eventPayload.formLabels[key] = key;
+    }
+
+    body.append('event', JSON.stringify(eventPayload));
+
+    /* keepalive matters here: this is a plain multi-page site, so the
+       redirect below is a real navigation and would otherwise abort an
+       in-flight fetch and silently drop the lead. */
+    return fetch(ENDPOINT, {
+      method: 'POST',
+      headers: { version: '2021-07-28' },
+      body: body,
+      keepalive: true
+    });
+  }
+
+  function shallow(o) { var r = {}; for (var k in o) r[k] = o[k]; return r; }
+
+  /* ---- helpers ------------------------------------------------------ */
+  function digits(s) { return (s || '').replace(/\D/g, ''); }
+
+  function formatPhone(v) {
+    var d = digits(v);
+    if (d.charAt(0) === '1' && d.length > 1) d = d.slice(1);   /* +1 country code; no US area code starts with 1 */
+    d = d.slice(0, 10);
+    if (d.length < 4) return d;
+    if (d.length < 7) return '(' + d.slice(0, 3) + ') ' + d.slice(3);
+    return '(' + d.slice(0, 3) + ') ' + d.slice(3, 6) + '-' + d.slice(6);
+  }
+
+  function maskPhone(input) {
+    input.addEventListener('input', function () {
+      var atEnd = input.selectionStart === input.value.length;
+      input.value = formatPhone(input.value);
+      if (atEnd) { try { input.setSelectionRange(input.value.length, input.value.length); } catch (e) {} }
+    });
+    input.addEventListener('blur', function () { input.value = formatPhone(input.value); });
+  }
+
+  function uuid() {
+    if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+      var r = Math.random() * 16 | 0;
+      return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+    });
+  }
+
+  /* ---- form wiring --------------------------------------------------- */
+  function wire(form) {
+    var out = form.querySelector('.qm-out, .fmsg');
+    var btn = form.querySelector('button[type=submit]');
+    var phone = form.querySelector('input[name=phone]');
+    if (phone) maskPhone(phone);
+
+    function say(html) {
+      if (!out) return;
+      out.innerHTML = html;
+      out.className = out.className.replace(/\s*\bon\b/, '') + ' on';
+    }
+    function clearBad() {
+      var b = form.querySelectorAll('.bad');
+      for (var i = 0; i < b.length; i++) b[i].className = b[i].className.replace(/\s*\bbad\b/, '');
+    }
+    function bad(el, msg) {
+      el.className += ' bad';
+      say(msg);
+      el.focus();
+    }
+    function val(n) {
+      var el = form.querySelector('[name=' + n + ']');
+      return el ? el.value.trim() : '';
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      clearBad();
+
+      var nameEl  = form.querySelector('[name=name]');
+      var emailEl = form.querySelector('[name=email]');
+      var zipEl   = form.querySelector('[name=zip]');
+
+      if (!nameEl.value.trim())        return bad(nameEl,  'Please tell us your name.');
+      if (digits(phone.value).length !== 10)
+                                       return bad(phone,   'Please enter a 10-digit phone number so we can call you back.');
+      if (emailEl && emailEl.value.trim() && !/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(emailEl.value.trim()))
+                                       return bad(emailEl, 'That email address does not look right.');
+      if (zipEl && zipEl.value.trim() && digits(zipEl.value).length !== 5)
+                                       return bad(zipEl,   'Please enter a 5-digit ZIP code, or leave it blank.');
+
+      var service = val('service');
+      var zip     = val('zip');
+      var message = val('message');
+
+      /* Anything without a custom-field ID rides along in the notes so the
+         detail still reaches the contact record. */
+      var spill = [];
+      if (!CF.service && service) spill.push('Service needed: ' + service);
+      if (!CF.zip     && zip)     spill.push('ZIP: ' + zip);
+      if (!CF.message && message) spill.push('Project details: ' + message);
+
+      var formData   = { full_name: nameEl.value.trim(), phone: formatPhone(phone.value) };
+      var formLabels = { full_name: 'Full Name', phone: 'Phone' };
+      if (emailEl && emailEl.value.trim()) {
+        formData.email = emailEl.value.trim();
+        formLabels.email = 'Email';
+      }
+      if (spill.length) {
+        formData.calendar_notes = spill.join('\n');
+        formLabels.calendar_notes = 'Message';
+      }
+
+      var customFields = {};
+      if (CF.service && service) customFields[CF.service] = { value: service, label: 'Service' };
+      if (CF.zip     && zip)     customFields[CF.zip]     = { value: zip,     label: 'Zip' };
+      if (CF.message && message) customFields[CF.message] = { value: message, label: 'Your Message' };
+
+      if (btn) btn.disabled = true;
+      say('Sending…');
+
+      var done = false;
+      function go() {
+        if (done) return;
+        done = true;
+        window.location.href = THANKS;
+      }
+
+      var req;
+      try {
+        req = postTrackingEvent({
+          type: 'external_form_submission',
+          timestamp: Date.now(),
+          formId: 'quote form',
+          formData: formData,
+          formLabels: formLabels,
+          url: window.location.href,
+          title: document.title,
+          path: window.location.pathname,
+          userAgent: navigator.userAgent,
+          trackingId: TRACKING_ID,
+          locationId: LOCATION_ID,
+          sessionId: uuid(),
+          properties: {
+            deviceType: /Mobile|Android|iPhone/i.test(navigator.userAgent) ? 'mobile' : 'desktop'
+          }
+        }, { customFields: customFields });
+      } catch (err) { req = null; }
+
+      if (req && req.then) {
+        req.then(go, function () {
+          done = true;
+          if (btn) btn.disabled = false;
+          say('Something went wrong sending that. Please call <a href="' + TEL + '">' + PHONE +
+              '</a> or email <a href="mailto:' + EMAIL + '">' + EMAIL + '</a> instead.');
+        });
+        setTimeout(go, 2500);   /* never leave someone staring at "Sending..." */
+      } else {
+        go();
+      }
+    });
+  }
+
+  /* ---- modal --------------------------------------------------------- */
+  function initModal() {
+    var ov = document.getElementById('qm-ov');
+    if (!ov) return;
+    var panel = ov.querySelector('.qm');
+    var closeBtn = document.getElementById('qm-x');
+    var last = null;
+
+    function open() {
+      last = document.activeElement;
+      ov.hidden = false;
+      document.body.className += ' qm-lock';
+      requestAnimationFrame(function () { ov.className = 'qm-ov on'; });
+      var first = ov.querySelector('input[name=name]');
+      if (first) first.focus();
+    }
+    function close() {
+      ov.className = 'qm-ov';
+      document.body.className = document.body.className.replace(/\s*\bqm-lock\b/, '');
+      setTimeout(function () { ov.hidden = true; }, 180);
+      if (last && last.focus) last.focus();
+    }
+
+    closeBtn.addEventListener('click', close);
+    ov.addEventListener('mousedown', function (e) { if (e.target === ov) close(); });
+    document.addEventListener('keydown', function (e) {
+      if (ov.hidden) return;
+      if (e.key === 'Escape') { close(); return; }
+      if (e.key !== 'Tab') return;
+      var f = panel.querySelectorAll('button, input, textarea, a[href]');
+      var list = [];
+      for (var i = 0; i < f.length; i++) if (!f[i].disabled && f[i].offsetParent !== null) list.push(f[i]);
+      if (!list.length) return;
+      var first = list[0], lastEl = list[list.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); lastEl.focus(); }
+      else if (!e.shiftKey && document.activeElement === lastEl) { e.preventDefault(); first.focus(); }
+    });
+
+    /* Every "Get Estimate" on the site is an a[href="#estimate"] - nav,
+       hero, mobile bar, drawer and the closing CTA band all route here.
+       On /contact/ the real form is already the page, so scroll to it. */
+    var onContact = !!document.getElementById('estimate-form');
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest ? e.target.closest('a[href="#estimate"]') : null;
+      if (!a) return;
+      if (onContact) return;
+      e.preventDefault();
+      open();
+    });
+  }
+
+  function boot() {
+    initModal();
+    var forms = document.querySelectorAll('.js-quote-form');
+    for (var i = 0; i < forms.length; i++) wire(forms[i]);
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
+  else boot();
 })();
 </script>
 </body>
