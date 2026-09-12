@@ -621,7 +621,7 @@ body.nav-open{overflow:hidden}
 @media(max-width:900px){.topbar{display:none}}
 
 /* ---- Quote modal ------------------------------------------------------ */
-.qm-ov{position:fixed;inset:0;z-index:120;display:flex;align-items:flex-start;justify-content:center;
+.qm-ov{position:fixed;inset:0;z-index:300;display:flex;align-items:flex-start;justify-content:center;
   padding:24px 16px;overflow-y:auto;background:rgba(11,23,33,.74);-webkit-backdrop-filter:blur(3px);
   backdrop-filter:blur(3px);opacity:0;transition:opacity .18s ease}
 .qm-ov.on{opacity:1}
@@ -662,6 +662,7 @@ body.nav-open{overflow:hidden}
 .qm-out.on{display:block}
 .qm-out a{color:var(--green);font-weight:700}
 body.qm-lock{overflow:hidden}
+body.qm-lock .mobilebar{display:none}   /* sticky call bar must not punch through */
 @media (max-width:560px){
   .qm-ov{padding:0}
   .qm{max-width:none;min-height:100%;border-top-width:3px}
@@ -1581,8 +1582,21 @@ function shut(id,trig){var p=document.getElementById(id);if(!p||p.hidden)return;
     var closeBtn = document.getElementById('qm-x');
     var last = null;
 
+    /* the burger drawer owns z-index 200 and its own body class - if the tap
+       came from a link inside it, shut it before the overlay goes up. */
+    function closeDrawer() {
+      var d = document.getElementById('navdrawer');
+      if (!d || d.hidden || d.className.indexOf('open') < 0) return;
+      d.className = d.className.replace(/\s*\bopen\b/, '');
+      document.body.className = document.body.className.replace(/\s*\bnav-open\b/, '');
+      var b = document.querySelector('.burger');
+      if (b) b.setAttribute('aria-expanded', 'false');
+      setTimeout(function () { d.hidden = true; }, 320);
+    }
+
     function open() {
       last = document.activeElement;
+      closeDrawer();
       ov.hidden = false;
       document.body.className += ' qm-lock';
       requestAnimationFrame(function () { ov.className = 'qm-ov on'; });
