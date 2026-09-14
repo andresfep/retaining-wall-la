@@ -666,10 +666,31 @@ body.qm-lock .mobilebar{display:none}   /* sticky call bar must not punch throug
 @media (max-width:560px){
   .qm-ov{padding:0}
   .qm{max-width:none;min-height:100%;border-top-width:3px}
-  .qm-hd{padding:18px 18px 16px}
-  .qm-hd .qm-t{font-size:22px}
-  .qm-bd{padding:18px}
-  .qm-row{grid-template-columns:1fr;gap:0}
+  /* The whole form has to clear the fold on a phone, submit button included,
+     so everything below is tightened rather than merely scaled down. */
+  .qm-hd{padding:13px 16px 12px}
+  .qm-hd .qm-t{font-size:20px}
+  .qm-hd .qm-s{margin-top:4px;font-size:12.5px;line-height:1.38}
+  .qm-bd{padding:14px 16px 16px}
+  .qm-row{grid-template-columns:1fr 1fr;gap:10px}
+  .qm-f{margin-bottom:9px;gap:3px}
+  .qm-f label{font-size:11.5px}
+  /* 16px is the floor: below it iOS Safari zooms the page on focus. */
+  .qm-f input,.qm-f textarea{font-size:16px;padding:9px 11px}
+  .qm-f textarea{min-height:76px}
+  .qm-note{margin-top:8px;font-size:12px;line-height:1.45}
+  /* Safety net for anything shorter than we planned for - landscape, large
+     accessibility text, a browser with deeper chrome. The button rides the
+     bottom edge instead of disappearing under it. The paper-coloured spread
+     masks the gap around it while content scrolls behind. */
+  .qm-bd button[type=submit]{position:sticky;bottom:8px;margin-top:9px;padding:13px 18px;
+    font-size:15.5px;box-shadow:0 0 0 8px var(--paper),0 8px 20px rgba(11,23,33,.16)}
+}
+@media (max-width:560px) and (max-height:640px){
+  .qm-hd .qm-s{display:none}
+  .qm-hd{padding:11px 16px 11px}
+  .qm-f{margin-bottom:7px}
+  .qm-f textarea{min-height:70px}
 }
 @media (prefers-reduced-motion:reduce){
   .qm-ov,.qm{transition:none}
@@ -1356,7 +1377,7 @@ function shut(id,trig){var p=document.getElementById(id);if(!p||p.hidden)return;
                  placeholder="Type the service you need &mdash; new wall, repair, drainage&hellip;"></div>
         <div class="qm-f"><label for="qm-message">Tell Us About the Project</label>
           <textarea id="qm-message" name="message"
-            placeholder="Roughly how tall and how long is the wall? Is it new work or an existing wall? If it is existing, what is it doing &mdash; leaning, cracking, bulging, weeping after rain?"></textarea></div>
+            placeholder="How tall and how long is the wall? Is it new work, or an existing wall that has moved?"></textarea></div>
         <button type="submit">Request My Free Estimate</button>
         <p class="qm-note">No obligation, and no pressure to sign anything on the spot. We will not pass your details to anyone else.</p>
         <div class="qm-out" id="qm-out" role="status" aria-live="polite"></div>
